@@ -6,7 +6,7 @@
  */
 
 export const githubConfig = {
-  username: 'Saurabhsing21',
+  username: 'ayushdhiman7',
   // Deno Deploy Classic sunset Jul 2026 — use jogruber's maintained API
   apiUrl: 'https://github-contributions-api.jogruber.de/v4',
 

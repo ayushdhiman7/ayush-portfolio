@@ -5,9 +5,9 @@ import { getPublishedBlogPosts } from '@/lib/blog';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Blog – Saurabh Singh',
+  title: 'Blog – Ayush Kumar',
   description:
-    'Thoughts on AI, full-stack development, and building products that matter.',
+    'Thoughts on full-stack development and building products that matter.',
 };
 
 /** Refresh listing hourly so newly published Dev.to posts appear automatically */

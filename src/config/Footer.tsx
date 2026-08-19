@@ -1,7 +1,7 @@
 import { socialLinks } from '@/config/Hero';
 
 export const footerConfig = {
-  developer: 'Saurabh Singh',
+  developer: 'Ayush Kumar',
   text: '©',
   copyright: 'All rights reserved.',
   showVisitorCount: true,
@@ -16,5 +16,5 @@ export const footerConfig = {
 };
 
 export const footerSocials = socialLinks.filter((s) =>
-  ['Github', 'LinkedIn', 'X'].includes(s.name),
+  ['Github', 'LinkedIn', 'LeetCode'].includes(s.name),
 );

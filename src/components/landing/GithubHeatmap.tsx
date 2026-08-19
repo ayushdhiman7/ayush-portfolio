@@ -103,7 +103,7 @@ export default function GithubHeatmap() {
         <ActivityCalendar
           data={contributions}
           blockSize={10}
-          blockMargin={3}
+          blockMargin={2.8}
           fontSize={githubConfig.fontSize}
           colorScheme={theme === 'dark' ? 'dark' : 'light'}
           maxLevel={githubConfig.maxLevel}

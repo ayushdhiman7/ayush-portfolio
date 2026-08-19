@@ -124,17 +124,17 @@ export default function InlineExperienceCard({
               {experience.location ? ` · ${experience.location}` : ''}
             </p>
 
-            <ul className="flex flex-col gap-1.5">
+            <div className="flex flex-col gap-2">
               {experience.description?.map((desc, i) => (
-                <li
+                <p
                   key={i}
                   className="text-xs leading-relaxed text-muted-foreground"
                   dangerouslySetInnerHTML={{
-                    __html: `• ${parseDescription(desc)}`,
+                    __html: parseDescription(desc),
                   }}
                 />
               ))}
-            </ul>
+            </div>
 
             {experience.technologies?.length > 0 && (
               <div className="flex flex-wrap gap-1.5">

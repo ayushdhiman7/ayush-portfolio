@@ -94,8 +94,8 @@ function PRSkeleton() {
   );
 }
 
-const GITHUB_USERNAME = 'Saurabhsing21';
-const DEFAULT_VISIBLE = 10;
+const GITHUB_USERNAME = 'ayushdhiman7';
+const DEFAULT_VISIBLE = 6;
 
 const SKIP_TITLES = new Set([
   'testing frontend',
@@ -103,7 +103,7 @@ const SKIP_TITLES = new Set([
   'fixed',
   'dashboard',
   'addded backend',
-  'created pull request for saurabhsingh branch',
+  'created pull request for feature branch',
 ]);
 
 export default function OpenSourceContributions() {

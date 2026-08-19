@@ -144,13 +144,13 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
         </div>
 
         {/* Description */}
-        <div className="text-secondary flex flex-col">
+        <div className="text-secondary flex flex-col gap-2">
           {experience.description.map(
             (description: string, descIndex: number) => (
               <p
                 key={descIndex}
                 dangerouslySetInnerHTML={{
-                  __html: `• ${parseDescription(description)}`,
+                  __html: parseDescription(description),
                 }}
               />
             ),

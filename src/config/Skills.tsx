@@ -1,33 +1,23 @@
-import AWS from '@/components/technologies/AWS';
-import Bun from '@/components/technologies/Bun';
-import ChatGPT from '@/components/technologies/ChatGPT';
+import CSS from '@/components/technologies/CSS';
 import Docker from '@/components/technologies/Docker';
-import FastAPI from '@/components/technologies/FastAPI';
+import ExpressJs from '@/components/technologies/ExpressJs';
 import Figma from '@/components/technologies/Figma';
-import GCloud from '@/components/technologies/GCloud';
 import Git from '@/components/technologies/Git';
 import Github from '@/components/technologies/Github';
-import Golang from '@/components/technologies/Golang';
-import HuggingFace from '@/components/technologies/HuggingFace';
-import Java from '@/components/technologies/Java';
+import Html from '@/components/technologies/Html';
 import JavaScript from '@/components/technologies/JavaScript';
-import LangChain from '@/components/technologies/LangChain';
+import Laravel from '@/components/technologies/Laravel';
 import Linux from '@/components/technologies/Linux';
 import MongoDB from '@/components/technologies/MongoDB';
-import NestJs from '@/components/technologies/NestJs';
-import NextJs from '@/components/technologies/NextJs';
+import MySQL from '@/components/technologies/MySQL';
 import NodeJs from '@/components/technologies/NodeJs';
+import Php from '@/components/technologies/Php';
 import PostgreSQL from '@/components/technologies/PostgreSQL';
 import Postman from '@/components/technologies/Postman';
-import Prisma from '@/components/technologies/Prisma';
-import Python from '@/components/technologies/Python';
-import RabbitMQ from '@/components/technologies/RabbitMQ';
 import ReactIcon from '@/components/technologies/ReactIcon';
-import Redis from '@/components/technologies/Redis';
-import Shadcn from '@/components/technologies/Shadcn';
-import SQL from '@/components/technologies/SQL';
 import TailwindCss from '@/components/technologies/TailwindCss';
 import TypeScript from '@/components/technologies/TypeScript';
+import Vue from '@/components/technologies/Vue';
 import type { ReactNode } from 'react';
 
 export interface SkillItem {
@@ -38,9 +28,14 @@ export interface SkillItem {
 
 export const skills: SkillItem[] = [
   {
-    name: 'TypeScript',
-    href: 'https://www.typescriptlang.org/',
-    icon: <TypeScript />,
+    name: 'HTML',
+    href: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+    icon: <Html />,
+  },
+  {
+    name: 'CSS',
+    href: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+    icon: <CSS />,
   },
   {
     name: 'JavaScript',
@@ -48,24 +43,9 @@ export const skills: SkillItem[] = [
     icon: <JavaScript />,
   },
   {
-    name: 'Python',
-    href: 'https://www.python.org/',
-    icon: <Python />,
-  },
-  {
-    name: 'Java',
-    href: 'https://www.java.com/',
-    icon: <Java />,
-  },
-  {
-    name: 'Golang',
-    href: 'https://go.dev/',
-    icon: <Golang />,
-  },
-  {
-    name: 'Node.js',
-    href: 'https://nodejs.org/',
-    icon: <NodeJs />,
+    name: 'TypeScript',
+    href: 'https://www.typescriptlang.org/',
+    icon: <TypeScript />,
   },
   {
     name: 'React',
@@ -73,44 +53,29 @@ export const skills: SkillItem[] = [
     icon: <ReactIcon />,
   },
   {
-    name: 'Next.js',
-    href: 'https://nextjs.org/',
-    icon: <NextJs />,
+    name: 'Vue',
+    href: 'https://vuejs.org/',
+    icon: <Vue />,
   },
   {
-    name: 'Nest.js',
-    href: 'https://nestjs.com/',
-    icon: <NestJs />,
+    name: 'Node.js',
+    href: 'https://nodejs.org/',
+    icon: <NodeJs />,
   },
   {
-    name: 'Langchain',
-    href: 'https://www.langchain.com/',
-    icon: <LangChain />,
+    name: 'Express.js',
+    href: 'https://expressjs.com/',
+    icon: <ExpressJs />,
   },
   {
-    name: 'FastAPI',
-    href: 'https://fastapi.tiangolo.com/',
-    icon: <FastAPI />,
+    name: 'PHP',
+    href: 'https://www.php.net/',
+    icon: <Php />,
   },
   {
-    name: 'Bun',
-    href: 'https://bun.sh/',
-    icon: <Bun />,
-  },
-  {
-    name: 'Tailwind CSS',
-    href: 'https://tailwindcss.com/',
-    icon: <TailwindCss />,
-  },
-  {
-    name: 'shadcn/ui',
-    href: 'https://ui.shadcn.com/',
-    icon: <Shadcn />,
-  },
-  {
-    name: 'PostgreSQL',
-    href: 'https://www.postgresql.org/',
-    icon: <PostgreSQL />,
+    name: 'Laravel',
+    href: 'https://laravel.com/',
+    icon: <Laravel />,
   },
   {
     name: 'MongoDB',
@@ -118,24 +83,19 @@ export const skills: SkillItem[] = [
     icon: <MongoDB />,
   },
   {
-    name: 'SQL',
-    href: 'https://en.wikipedia.org/wiki/SQL',
-    icon: <SQL />,
+    name: 'MySQL',
+    href: 'https://www.mysql.com/',
+    icon: <MySQL />,
   },
   {
-    name: 'Redis',
-    href: 'https://redis.io/',
-    icon: <Redis />,
+    name: 'PostgreSQL',
+    href: 'https://www.postgresql.org/',
+    icon: <PostgreSQL />,
   },
   {
-    name: 'RabbitMQ',
-    href: 'https://www.rabbitmq.com/',
-    icon: <RabbitMQ />,
-  },
-  {
-    name: 'Prisma',
-    href: 'https://www.prisma.io/',
-    icon: <Prisma />,
+    name: 'Tailwind CSS',
+    href: 'https://tailwindcss.com/',
+    icon: <TailwindCss />,
   },
   {
     name: 'Git',
@@ -153,16 +113,6 @@ export const skills: SkillItem[] = [
     icon: <Docker />,
   },
   {
-    name: 'GCloud',
-    href: 'https://cloud.google.com/',
-    icon: <GCloud />,
-  },
-  {
-    name: 'AWS',
-    href: 'https://aws.amazon.com/',
-    icon: <AWS />,
-  },
-  {
     name: 'Linux',
     href: 'https://www.kernel.org/',
     icon: <Linux />,
@@ -176,15 +126,5 @@ export const skills: SkillItem[] = [
     name: 'Figma',
     href: 'https://www.figma.com/',
     icon: <Figma />,
-  },
-  {
-    name: 'Hugging Face',
-    href: 'https://huggingface.co/',
-    icon: <HuggingFace />,
-  },
-  {
-    name: 'ChatGPT',
-    href: 'https://chatgpt.com/',
-    icon: <ChatGPT />,
   },
 ];

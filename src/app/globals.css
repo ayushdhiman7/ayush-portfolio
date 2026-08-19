@@ -179,6 +179,21 @@
   }
 }
 
+/* Hide scrollbars while keeping the ability to scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Prevent any page-level horizontal scrollbar */
+html,
+body {
+  overflow-x: clip;
+}
+
 /* Content column width */
 .content-column {
   max-width: var(--content-max-width);

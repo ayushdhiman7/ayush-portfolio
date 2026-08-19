@@ -1,25 +1,28 @@
-import Bun from '@/components/technologies/Bun';
 import JavaScript from '@/components/technologies/JavaScript';
+import Laravel from '@/components/technologies/Laravel';
 import MongoDB from '@/components/technologies/MongoDB';
-import NextJs from '@/components/technologies/NextJs';
+import MySQL from '@/components/technologies/MySQL';
 import NodeJs from '@/components/technologies/NodeJs';
-import Prisma from '@/components/technologies/Prisma';
+import Php from '@/components/technologies/Php';
 import ReactIcon from '@/components/technologies/ReactIcon';
+import TailwindCss from '@/components/technologies/TailwindCss';
 import TypeScript from '@/components/technologies/TypeScript';
+import Vue from '@/components/technologies/Vue';
 
 export const mySkills = [
   <ReactIcon key="react" />,
-  <Bun key="bun" />,
+  <Vue key="vue" />,
   <JavaScript key="javascript" />,
   <TypeScript key="typescript" />,
-  <MongoDB key="mongodb" />,
-  <NextJs key="nextjs" />,
   <NodeJs key="nodejs" />,
-  // <PostgreSQL key="postgresql" />,
-  <Prisma key="prisma" />,
+  <Laravel key="laravel" />,
+  <Php key="php" />,
+  <MongoDB key="mongodb" />,
+  <MySQL key="mysql" />,
+  <TailwindCss key="tailwind" />,
 ];
 
 export const about = {
-  name: 'Saurabh Singh',
-  description: `I'm an AI Full Stack engineer working on applied AI. I love building products to solve real-world problems and I'm specialized in building MVPs.`,
+  name: 'Ayush Kumar',
+  description: `I'm a Software Engineer working across backend and frontend to build scalable APIs and production-ready applications, with an emphasis on clean, efficient, and maintainable code.`,
 };

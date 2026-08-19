@@ -1,7 +1,7 @@
 import SectionDivider from '@/components/common/SectionDivider';
 import { Quote } from '@/components/common/Quote';
 import AboutMe from '@/components/landing/AboutMe';
-// import Achievements from '@/components/landing/Achievements';
+import Achievements from '@/components/landing/Achievements';
 import Blog from '@/components/landing/Blog';
 import Experience from '@/components/landing/Experience';
 import Hero from '@/components/landing/Hero';
@@ -26,7 +26,7 @@ export default function page() {
         <Work />
         <OpenSourceContributions />
         <Skills />
-        {/* <Achievements /> */}
+        <Achievements />
         <Blog />
         <Testimonials />
         <AboutMe />

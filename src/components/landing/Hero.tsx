@@ -114,7 +114,7 @@ export default function Hero() {
             )}
             style={{ letterSpacing: '0.12em' }}
           >
-            SS
+            AYUSH
           </span>
           <span className="text-[11px] font-medium tracking-wide text-white/45">
             Hover me

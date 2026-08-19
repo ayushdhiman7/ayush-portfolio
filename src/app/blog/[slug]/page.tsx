@@ -30,7 +30,7 @@ export async function generateMetadata({
   const { title, description, image } = post.frontmatter;
 
   return {
-    title: `${title} – Saurabh Singh`,
+    title: `${title} – Ayush Kumar`,
     description,
     openGraph: {
       title,

@@ -1,14 +1,16 @@
 import Docker from '@/components/technologies/Docker';
-import LangChain from '@/components/technologies/LangChain';
+import ExpressJs from '@/components/technologies/ExpressJs';
+import Html from '@/components/technologies/Html';
+import JavaScript from '@/components/technologies/JavaScript';
+import Laravel from '@/components/technologies/Laravel';
 import MongoDB from '@/components/technologies/MongoDB';
-import NextJs from '@/components/technologies/NextJs';
+import MySQL from '@/components/technologies/MySQL';
 import NodeJs from '@/components/technologies/NodeJs';
-import PostgreSQL from '@/components/technologies/PostgreSQL';
-import Python from '@/components/technologies/Python';
+import Php from '@/components/technologies/Php';
 import ReactIcon from '@/components/technologies/ReactIcon';
 import TailwindCss from '@/components/technologies/TailwindCss';
 import TypeScript from '@/components/technologies/TypeScript';
-import Vercel from '@/components/technologies/Vercel';
+import Vue from '@/components/technologies/Vue';
 
 export interface Technology {
   name: string;
@@ -38,100 +40,73 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    isCurrent: false,
-    isBlur: false,
-    employmentType: 'Internship',
-    company: 'Detoxio',
-    position: 'AI Full Stack Intern',
-    location: 'Remote',
-    image: '/company/detoxio.png',
+    isCurrent: true,
+    employmentType: 'Full Time',
+    company: 'Uimatic',
+    position: 'Software Engineer',
+    location: 'Mohali',
+    image: '/company/uimatic.jpeg',
     description: [
-      'Building cutting-edge GenAI tools and applications, focusing on practical AI implementations for real-world use cases.',
-      'Developing and deploying AI agents using modern frameworks like LangChain and other GenAI technologies.',
-      'Architecting full-stack solutions that integrate AI capabilities with robust backend and frontend systems.',
-      'Working with Python, TypeScript, and modern AI frameworks to create intelligent, scalable applications.',
-      'Collaborating on innovative AI projects that push the boundaries of applied artificial intelligence.',
+      'Developing and maintaining RESTful APIs using Laravel (PHP) for production e-commerce platforms, contributing to a multi-tenant architecture that enables multiple stores and clients to operate within a single platform. Building the e-commerce frontend using Vue.js with Pinia state management and integrating backend APIs to support core shopping functionality, along with online payments via PayMongo and delivery management through Lalamove services.',
     ],
-    startDate: 'March 2025',
-    endDate: 'June 2026',
+    startDate: 'May 2025',
+    endDate: 'Present',
     technologies: [
       {
-        name: 'Python',
-        href: 'https://www.python.org/',
-        icon: <Python />,
+        name: 'Laravel',
+        href: 'https://laravel.com/',
+        icon: <Laravel />,
       },
       {
-        name: 'LangChain',
-        href: 'https://www.langchain.com/',
-        icon: <LangChain />,
+        name: 'Vue',
+        href: 'https://vuejs.org/',
+        icon: <Vue />,
       },
       {
-        name: 'TypeScript',
-        href: 'https://typescriptlang.org/',
-        icon: <TypeScript />,
+        name: 'PHP',
+        href: 'https://www.php.net/',
+        icon: <Php />,
       },
       {
-        name: 'Next.js',
-        href: 'https://nextjs.org/',
-        icon: <NextJs />,
-      },
-      {
-        name: 'React',
-        href: 'https://react.dev/',
-        icon: <ReactIcon />,
+        name: 'MySQL',
+        href: 'https://www.mysql.com/',
+        icon: <MySQL />,
       },
       {
         name: 'Docker',
         href: 'https://www.docker.com/',
         icon: <Docker />,
       },
-      {
-        name: 'PostgreSQL',
-        href: 'https://www.postgresql.org/',
-        icon: <PostgreSQL />,
-      },
+    ],
+    website: 'https://www.linkedin.com/in/ayush-kumar-47060a242',
+  },
+  {
+    isCurrent: false,
+    employmentType: 'Full Time',
+    company: 'V Recruiters',
+    position: 'Full Stack Developer',
+    location: 'Zirakpur',
+    image: '/company/vrecruiters.webp',
+    description: [
+      'Worked as a Full-Stack Developer focusing mainly on backend development, building RESTful APIs and contributing to dynamic web applications while ensuring clean, maintainable, and scalable code practices across the codebase.',
+    ],
+    startDate: 'November 2024',
+    endDate: 'April 2025',
+    technologies: [
       {
         name: 'Node.js',
         href: 'https://nodejs.org/',
         icon: <NodeJs />,
       },
       {
-        name: 'Vercel',
-        href: 'https://vercel.com/',
-        icon: <Vercel />,
-      },
-    ],
-    website: 'https://www.bithive.in/',
-    github: 'BitHiveTechnologies',
-    x: 'https://x.com/BitHiveTechnologies',
-    linkedin: 'https://www.linkedin.com/company/bithive-technology/',
-  },
-  {
-    isCurrent: false,
-    employmentType: 'Full Time',
-    company: 'Bithive Technology',
-    position: 'Chief Technology Officer (CTO)',
-    location: 'Freelance Agency',
-    image: '/company/bithive.webp',
-    description: [
-      'Led technology strategy and development as CTO for a freelancing agency, overseeing all technical operations and project delivery.',
-      'Architected and developed custom websites tailored to client requirements, ensuring scalability, performance, and modern design standards.',
-      'Built custom tools and automation solutions to streamline client workflows and improve operational efficiency.',
-      'Managed end-to-end project lifecycle from requirements gathering to deployment, ensuring timely delivery and client satisfaction.',
-      'Implemented modern tech stack including React, Next.js, and TypeScript for robust web applications.',
-    ],
-    startDate: 'December 2024',
-    endDate: 'November 2025',
-    technologies: [
-      {
-        name: 'Next.js',
-        href: 'https://nextjs.org/',
-        icon: <NextJs />,
+        name: 'Express.js',
+        href: 'https://expressjs.com/',
+        icon: <ExpressJs />,
       },
       {
-        name: 'React',
-        href: 'https://react.dev/',
-        icon: <ReactIcon />,
+        name: 'MongoDB',
+        href: 'https://www.mongodb.com/',
+        icon: <MongoDB />,
       },
       {
         name: 'TypeScript',
@@ -139,29 +114,62 @@ export const experiences: Experience[] = [
         icon: <TypeScript />,
       },
       {
-        name: 'Node.js',
-        href: 'https://nodejs.org/',
-        icon: <NodeJs />,
-      },
-      {
-        name: 'MongoDB',
-        href: 'https://mongodb.com/',
-        icon: <MongoDB />,
+        name: 'React',
+        href: 'https://react.dev/',
+        icon: <ReactIcon />,
       },
       {
         name: 'Tailwind CSS',
         href: 'https://tailwindcss.com/',
         icon: <TailwindCss />,
       },
+    ],
+    website: 'https://www.linkedin.com/in/ayush-kumar-47060a242',
+  },
+  {
+    isCurrent: false,
+    employmentType: 'Internship',
+    company: 'Excellence Technology',
+    position: 'MERN Stack Trainee',
+    location: 'Mohali',
+    image: '/company/excellence.png',
+    description: [
+      'During my MERN Stack training, I participated in code reviews, debugging, and optimizing code to improve performance and scalability. I gained hands-on experience with version control using GitHub and project management tools, and collaborated with team members to develop and maintain web applications using MongoDB, Express.js, React, and Node.js.',
+    ],
+    startDate: 'June 2024',
+    endDate: 'November 2024',
+    technologies: [
       {
-        name: 'Vercel',
-        href: 'https://vercel.com/',
-        icon: <Vercel />,
+        name: 'HTML',
+        href: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+        icon: <Html />,
+      },
+      {
+        name: 'JavaScript',
+        href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+        icon: <JavaScript />,
+      },
+      {
+        name: 'MongoDB',
+        href: 'https://www.mongodb.com/',
+        icon: <MongoDB />,
+      },
+      {
+        name: 'Express.js',
+        href: 'https://expressjs.com/',
+        icon: <ExpressJs />,
+      },
+      {
+        name: 'React',
+        href: 'https://react.dev/',
+        icon: <ReactIcon />,
+      },
+      {
+        name: 'Node.js',
+        href: 'https://nodejs.org/',
+        icon: <NodeJs />,
       },
     ],
-    website: 'https://www.bithive.in/',
-    github: 'https://github.com/BitHiveTechnologies',
-    x: 'https://x.com/BitHiveTechnologies',
-    linkedin: 'https://www.linkedin.com/company/bithive-technology/',
+    website: 'https://www.linkedin.com/in/ayush-kumar-47060a242',
   },
 ];

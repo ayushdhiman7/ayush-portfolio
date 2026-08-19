@@ -3,7 +3,6 @@ import { cn } from '@/lib/utils';
 import { Link } from 'next-view-transitions';
 import React from 'react';
 
-import HoverArrow from '../common/HoverArrow';
 import SectionTitle from '../common/SectionTitle';
 
 function TrophyIcon({ className }: { className?: string }) {
@@ -50,7 +49,6 @@ export default function Achievements() {
                   </p>
                 </div>
               </div>
-              <HoverArrow />
             </>
           );
 

@@ -1,0 +1,15 @@
+# Saurabh Singh
+
+> AI Full Stack Engineer — Applied AI, GenAI, and Agentic systems.
+
+## Links
+
+- Portfolio: https://saurabh.dev (update with your domain)
+- GitHub: https://github.com/Saurabhsing21
+- LinkedIn: https://www.linkedin.com/in/gitsaurabhsingh/
+- X: https://x.com/gitsaurabh0
+- Email: saurabhsingh881888@gmail.com
+
+## Skills
+
+Python, TypeScript, React, Next.js, LangChain, Agentic AI, Docker, PostgreSQL, MongoDB, Node.js

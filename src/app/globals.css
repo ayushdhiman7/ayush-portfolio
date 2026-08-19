@@ -1,0 +1,504 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin "@tailwindcss/typography";
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('/fonts/HankenGrotesk-Variable.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Hanken Grotesk Italic';
+  src: url('/fonts/HankenGrotesk-Italic-Variable.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/fonts/GeistMono-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --animate-marquee: marquee var(--duration, 40s) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration, 40s) linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+:root {
+  --radius: 0.625rem;
+  --blog-font-size: 16px;
+  --content-max-width: 42rem;
+  --section-padding-x: 1.5rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Dot-grid background */
+  --dot-color: rgba(0, 0, 0, 0.12);
+  --dot-size: 1px;
+  --dot-space: 20px;
+
+  /* Dashed border color */
+  --dashed-border: oklch(0.85 0 0);
+  /* Spaced dash pattern — looser gaps like reference */
+  --dash-length: 5px;
+  --dash-gap: 10px;
+}
+
+.dark {
+  --background: #0d0d09;
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.16 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.16 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.145 0 0);
+  --secondary: oklch(0.22 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.22 0 0);
+  --muted-foreground: oklch(0.65 0 0);
+  --accent: oklch(0.22 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.16 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.22 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+
+  /* Dot-grid background — dark mode */
+  --dot-color: rgba(255, 255, 255, 0.08);
+  --dashed-border: oklch(0.28 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+  }
+}
+
+/* Content column width */
+.content-column {
+  max-width: var(--content-max-width);
+}
+
+/* Spaced vertical dashed borders on content column (left + right) */
+.content-column-dashed {
+  position: relative;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.content-column-dashed::before,
+.content-column-dashed::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  pointer-events: none;
+  z-index: 1;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--dashed-border) 0,
+    var(--dashed-border) var(--dash-length),
+    transparent var(--dash-length),
+    transparent calc(var(--dash-length) + var(--dash-gap))
+  );
+}
+
+.content-column-dashed::before {
+  left: 0;
+}
+
+.content-column-dashed::after {
+  right: 0;
+}
+
+/* Full-width spaced horizontal dashed rule (column-width only) */
+.border-dashed-rule {
+  display: block;
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: transparent;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--dashed-border) 0,
+    var(--dashed-border) var(--dash-length),
+    transparent var(--dash-length),
+    transparent calc(var(--dash-length) + var(--dash-gap))
+  );
+}
+
+/* Dashed border utility (legacy — prefer spaced variants above) */
+.border-dashed-section {
+  border-style: dashed;
+  border-color: var(--dashed-border);
+}
+
+/* Full-width dot grid background for banner sections */
+.bg-dot-grid {
+  background-image: radial-gradient(
+    circle,
+    var(--dot-color) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+}
+
+/*
+ * Viewport-bleed dashed stroke — positioning via Tailwind on the element:
+ * absolute top-0 left-1/2 h-px w-[100vw] max-w-[100vw] -translate-x-1/2
+ * (see DashedHorizontalRule)
+ */
+.border-dashed-horizontal {
+  border: none;
+  background-color: transparent;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--dashed-border) 0,
+    var(--dashed-border) var(--dash-length),
+    transparent var(--dash-length),
+    transparent calc(var(--dash-length) + var(--dash-gap))
+  );
+}
+
+/* Projects grid: mid vertical + per-cell horizontal row dividers */
+.projects-grid-mid {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--dashed-border) 0,
+    var(--dashed-border) var(--dash-length),
+    transparent var(--dash-length),
+    transparent calc(var(--dash-length) + var(--dash-gap))
+  );
+}
+
+.projects-grid-row-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--dashed-border) 0,
+    var(--dashed-border) var(--dash-length),
+    transparent var(--dash-length),
+    transparent calc(var(--dash-length) + var(--dash-gap))
+  );
+}
+
+/* Period-ending section heading */
+.section-heading {
+  @apply text-2xl font-bold tracking-tight text-foreground;
+}
+
+/* View All button — dark on light, light on dark for clear contrast */
+.view-all-btn {
+  @apply inline-flex items-center justify-center gap-1.5 rounded-md px-5 py-2.5 text-sm font-medium transition-opacity hover:opacity-90;
+  background-color: oklch(0.2 0 0);
+  color: oklch(0.98 0 0);
+}
+
+.dark .view-all-btn {
+  background-color: oklch(0.86 0 0);
+  color: oklch(0.16 0 0);
+}
+
+/* Shared list-card hover surface (About Me, Blogs, Achievements) */
+.card-flat-interactive {
+  @apply rounded-lg border border-dashed bg-card/50 transition-all duration-300 ease-out;
+  border-color: var(--dashed-border);
+}
+
+.card-flat-interactive:hover {
+  background-color: color-mix(in oklab, var(--muted) 75%, transparent);
+  border-color: color-mix(in oklab, var(--foreground) 28%, transparent);
+}
+
+/* Diagonal hatch pattern for Testimonials / Newsletter */
+.hatch-bg {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 4px,
+    var(--dot-color) 4px,
+    var(--dot-color) 5px
+  );
+}
+
+/* Flat dashed card */
+.card-flat {
+  @apply rounded-lg border border-dashed bg-card/50;
+  border-color: var(--dashed-border);
+}
+
+/* Project preview sunbursts — light, centered, alternating */
+.project-sunburst-a {
+  background: repeating-conic-gradient(
+    from 0deg at 50% 50%,
+    #ff9b5c 0deg 12deg,
+    #ffe8c8 12deg 24deg,
+    #ffc9a8 24deg 36deg,
+    #fff4e0 36deg 48deg,
+    #ffb07a 48deg 60deg,
+    #ffe0c2 60deg 72deg
+  );
+}
+
+.project-sunburst-b {
+  background: repeating-conic-gradient(
+    from 0deg at 50% 50%,
+    #ffe9a8 0deg 12deg,
+    #e8f4ff 12deg 24deg,
+    #ffe0c4 24deg 36deg,
+    #f5f0ff 36deg 48deg,
+    #d9f0ea 48deg 60deg,
+    #fff6d9 60deg 72deg
+  );
+}
+
+.text-secondary {
+  @apply text-[#909092] dark:text-[#a1a1a1];
+}
+
+.font-hanken-grotesk {
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.font-hanken-grotesk-italic {
+  font-family: 'Hanken Grotesk Italic', sans-serif;
+}
+
+.font-geist-mono {
+  font-family: 'Geist Mono', monospace;
+}
+
+/* Code block copy button styles */
+.prose pre {
+  @apply relative;
+}
+
+.prose .group:hover .opacity-0 {
+  @apply opacity-100;
+}
+
+/* Page fade-in animation with blur */
+@keyframes fadeInBlur {
+  0% {
+    opacity: 0.2;
+    filter: blur(5px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+.animate-fade-in-blur {
+  animation: fadeInBlur 0.5s ease-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0.4;
+  filter: blur(3px);
+}
+
+/* Removed global View Transition API overrides to allow Skiper toggle styles to apply */
+
+/* Custom button inner shadow */
+.btn-inner-shadow {
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.1),
+    inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+.btn-inner-shadow:hover {
+  box-shadow:
+    inset 0 1px 3px rgba(0, 0, 0, 0.15),
+    inset 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark .btn-inner-shadow {
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.05),
+    inset 0 2px 4px rgba(255, 255, 255, 0.03);
+}
+
+.dark .btn-inner-shadow:hover {
+  box-shadow:
+    inset 0 1px 3px rgba(255, 255, 255, 0.08),
+    inset 0 2px 6px rgba(255, 255, 255, 0.06);
+}
+
+/* Custom skill inner shadow */
+.skill-inner-shadow {
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.08),
+    inset 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.dark .skill-inner-shadow {
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.06),
+    inset 0 1px 4px rgba(255, 255, 255, 0.03);
+}
+
+/* Custom tag inner shadow */
+.tag-inner-shadow {
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.06),
+    inset 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s ease;
+}
+
+.tag-inner-shadow:hover {
+  box-shadow:
+    inset 0 1px 3px rgba(0, 0, 0, 0.08),
+    inset 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.dark .tag-inner-shadow {
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.04),
+    inset 0 1px 3px rgba(255, 255, 255, 0.03);
+}
+
+.dark .tag-inner-shadow:hover {
+  box-shadow:
+    inset 0 1px 3px rgba(255, 255, 255, 0.06),
+    inset 0 2px 6px rgba(255, 255, 255, 0.04);
+}
+
+/* Blog font size controls */
+.prose {
+  font-size: var(--blog-font-size);
+}
+
+.prose p,
+.prose li,
+.prose blockquote {
+  font-size: var(--blog-font-size);
+}
+
+.prose h1 {
+  font-size: calc(var(--blog-font-size) * 2.25);
+}
+
+.prose h2 {
+  font-size: calc(var(--blog-font-size) * 1.875);
+}
+
+.prose h3 {
+  font-size: calc(var(--blog-font-size) * 1.5);
+}
+
+.prose h4 {
+  font-size: calc(var(--blog-font-size) * 1.25);
+}

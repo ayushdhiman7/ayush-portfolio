@@ -1,0 +1,508 @@
+{
+  "projects": [
+    {
+      "title": "Nirdesh AI",
+      "role": "AI Voice / Full Stack Engineer",
+      "techStack": ["Voice AI", "Agentic AI", "FastAPI", "LangGraph"],
+      "date": "2026",
+      "shortDescription": "Ask questions, manage todos, search the web — all by voice. An instrumented multilingual voice agent featuring real-time STT, LangGraph agent, streaming TTS, and local VAD.",
+      "overview": "Nirdesh AI is an instrumented multilingual voice agent built as a sandwich architecture: streaming speech-to-text feeds a LangGraph-backed text agent, then streaming text-to-speech returns PCM audio to the browser.",
+      "keyFeatures": [
+        {
+          "name": "Multilingual Voice Loop",
+          "description": "Powered by Saaras v3 STT, sarvam-105b LLM, and Bulbul v3 TTS.",
+          "detail": "Delivers real-time spoken interactions across multiple languages."
+        },
+        {
+          "name": "Silero ONNX VAD",
+          "description": "Local 32 ms frames, speech pre-roll, 500 ms endpointing, and silence gating.",
+          "detail": "Filters background noise and manages precise voice activity detection."
+        },
+        {
+          "name": "Barge-in Control",
+          "description": "Cancels generation, tears down active TTS socket, flushes playback, and truncates history.",
+          "detail": "Ensures responsive interruption when user speaks during assistant audio playback."
+        },
+        {
+          "name": "LangChain Tools",
+          "description": "Server-side Exa web search and browser-proxied local todo management.",
+          "detail": "Empowers voice agent to perform web queries and manage client state."
+        },
+        {
+          "name": "Billing & Wallet",
+          "description": "Paise-denominated wallet with per-second voice session billing.",
+          "detail": "Enforces real-time balance tracking, warnings, and session cutoff."
+        }
+      ],
+      "technologies": [
+        "FastAPI",
+        "LangGraph",
+        "Python",
+        "React 19",
+        "TypeScript",
+        "Docker",
+        "Tailwind CSS"
+      ],
+      "links": {
+        "github": "https://github.com/Saurabhsing21/NirdeshAI",
+        "live": "https://github.com/Saurabhsing21/NirdeshAI"
+      },
+      "image": "/project/nirdesh-ai.png"
+    },
+    {
+      "title": "Lumina",
+      "role": "AI Full Stack Engineer",
+      "techStack": ["Artificial Intelligence", "Agentic AI", "Full Stack"],
+      "date": "2026",
+      "shortDescription": "An AI search agent powered by a custom agent loop that intelligently decides when to use tools like Google/web search to gather real-time information.",
+      "overview": "Lumina is a production-style AI search assistant — tool-calling agent, live web search, cited markdown answers, streaming UI. The agent is tool-first: the LLM decides when to search with no forced pre-search on every query.",
+      "keyFeatures": [
+        {
+          "name": "Tool-First Agent Loop",
+          "description": "The LLM decides when to search, eliminating unnecessary pre-searches.",
+          "detail": "Iteratively alternates between LLM reasoning and external tools until producing grounded responses."
+        },
+        {
+          "name": "Live Web Search",
+          "description": "Powered by Tavily API with basic and advanced depth modes.",
+          "detail": "Supports fast query searches and deep research modes."
+        },
+        {
+          "name": "Streamed, Cited Answers",
+          "description": "NDJSON streaming with inline citations tied to real web sources.",
+          "detail": "Renders markdown responses with click-through source links."
+        },
+        {
+          "name": "Multi-Model Routing",
+          "description": "Swap between GPT-4.1, Claude Sonnet 4, and Gemini 2.5 Flash via OpenRouter.",
+          "detail": "Dynamic model selection for tailored reasoning capabilities."
+        },
+        {
+          "name": "Auth & Credit Limits",
+          "description": "Supabase JWT authentication paired with server-side credit gates.",
+          "detail": "Tracks per-user queries and enforces access boundaries."
+        }
+      ],
+      "technologies": [
+        "Bun",
+        "Express 5",
+        "React 19",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "Tailwind CSS"
+      ],
+      "links": {
+        "github": "https://github.com/Saurabhsing21/Lumina",
+        "live": "https://perpelexity.vercel.app/"
+      },
+      "image": "/project/lumina.png"
+    },
+    {
+      "title": "Drug Discovery",
+      "role": "AI / Full Stack Engineer",
+      "techStack": ["LangGraph", "MCP", "Agentic AI", "FastAPI"],
+      "date": "2026",
+      "shortDescription": "Enterprise-grade multi-agent AI system for drug-target prioritisation across DepMap, Open Targets, Pharos, and Europe PMC.",
+      "overview": "Drug Discovery Agent automates end-to-end drug-target prioritisation with a LangGraph orchestrator, MCP-connected biomedical databases, deterministic scoring, and human-in-the-loop review gates.",
+      "keyFeatures": [
+        {
+          "name": "LangGraph Pipeline",
+          "description": "Planning, parallel collection, normalisation, scoring, evidence graphs, and synthesis.",
+          "detail": "Stateful DAG with checkpointing and resumability for reproducible research runs."
+        },
+        {
+          "name": "MCP Data Layer",
+          "description": "Parallel queries across DepMap, Pharos, Open Targets, and Europe PMC.",
+          "detail": "Standardised tool protocol decouples source connectors from pipeline logic."
+        },
+        {
+          "name": "Deterministic Scoring",
+          "description": "Weighted multi-source druggability scores with conflict detection.",
+          "detail": "Produces tiered recommendations with full provenance tracing."
+        },
+        {
+          "name": "Human-in-the-Loop",
+          "description": "Optional plan approval and review gates before dossier acceptance.",
+          "detail": "Researchers can approve, modify, or request more evidence."
+        },
+        {
+          "name": "Research Workbench",
+          "description": "FastAPI + Next.js UI with live SSE progress and follow-up Q&A.",
+          "detail": "Evidence carousel, conflict visualisation, and compare mode for gene dossiers."
+        }
+      ],
+      "technologies": [
+        "LangGraph",
+        "FastAPI",
+        "Python",
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Docker"
+      ],
+      "links": {
+        "github": "https://github.com/Saurabhsing21/Drug-discovery-agent/",
+        "live": "https://github.com/Saurabhsing21/Drug-discovery-agent/"
+      },
+      "image": "/project/drug-discovery.png"
+    },
+    {
+      "title": "ExploitDB RAG",
+      "role": "AI / Full Stack Engineer",
+      "techStack": ["RAG", "FastAPI", "ChromaDB", "OpenAI"],
+      "date": "2024",
+      "shortDescription": "AI-powered exploit intelligence system with RAG over 46,000+ ExploitDB entries, intent-aware retrieval, and hallucination validation.",
+      "overview": "ExploitDB RAG is a Retrieval-Augmented Generation assistant for searching and analyzing exploits from ExploitDB with intent-aware retrieval, hybrid semantic search, and response validation.",
+      "keyFeatures": [
+        {
+          "name": "Exploit Intelligence",
+          "description": "Search 46K+ ExploitDB entries by CVE, software, or natural language.",
+          "detail": "Indexes the full ExploitDB corpus for fast exploit discovery."
+        },
+        {
+          "name": "Intent-Aware Retrieval",
+          "description": "Classifies queries and extracts security entities for routing.",
+          "detail": "Chooses exact CVE match or semantic similarity based on intent."
+        },
+        {
+          "name": "Hybrid Search",
+          "description": "ChromaDB vector search with HuggingFace embeddings.",
+          "detail": "Combines keyword precision with semantic recall."
+        },
+        {
+          "name": "Hallucination Validation",
+          "description": "Verifies LLM answers against retrieved source documents.",
+          "detail": "Keeps generated exploit analysis grounded in real entries."
+        },
+        {
+          "name": "Exploit Customization",
+          "description": "Adapts retrieved exploit code to specified target environments.",
+          "detail": "Uses structured prompts to tailor payloads for OS and stack context."
+        }
+      ],
+      "technologies": [
+        "FastAPI",
+        "Python",
+        "React",
+        "TypeScript",
+        "LangChain",
+        "HuggingFace",
+        "OpenAI"
+      ],
+      "links": {
+        "github": "https://github.com/Saurabhsing21/Exploitdb_Rag/",
+        "live": "https://github.com/Saurabhsing21/Exploitdb_Rag/"
+      },
+      "image": "/project/exploitdb.png"
+    },
+    {
+      "title": "Wealth",
+      "role": "UI/UX Designer",
+      "techStack": ["Artificial Intelligence", "Technology"],
+      "date": "Nov. 2023 - Dec. 2024",
+      "shortDescription": "A comprehensive financial management solution that harnesses AI to simplify tracking income and expenses across multiple accounts.",
+      "overview": "Wealth is a comprehensive financial management solution that harnesses AI to simplify tracking income and expenses across multiple accounts. With features like smart categorization, receipt scanning, recurring transaction management, email alerts, and detailed financial analysis, Wealth delivers personalized monthly reports to help users gain control over their finances and make informed decisions.",
+      "keyFeatures": [
+        {
+          "name": "Multi-Account Tracking",
+          "description": "Aggregates income and expenses from various bank accounts in real time.",
+          "detail": "Users get a unified view of their financial status without manual input"
+        },
+        {
+          "name": "Smart Categorization",
+          "description": "AI automatically sorts transactions into categories like groceries or utilities.",
+          "detail": "It learns user spending habits to improve accuracy over time."
+        },
+        {
+          "name": "AI Receipt Scanning",
+          "description": "Scans receipts via smartphone camera, extracting details like amount and vendor.",
+          "detail": "Instantly logs expenses with minimal effort, reducing manual entry errors."
+        },
+        {
+          "name": "Recurring Transaction Management",
+          "description": "Detects and manages subscriptions or regular payments automatically.",
+          "detail": "Users can edit or cancel recurring expenses directly within the platform."
+        },
+        {
+          "name": "Email Alerts",
+          "description": "Sends real-time notifications for large transactions, due dates, or budget limits.",
+          "detail": "Keeps users proactive and aware of their financial activity."
+        },
+        {
+          "name": "Financial Analysis",
+          "description": "Analyzes spending patterns and income trends with interactive charts.",
+          "detail": "Highlights areas for savings and tracks financial health over time."
+        },
+        {
+          "name": "Personalized Monthly Reports",
+          "description": "Generates tailored reports summarizing income, expenses, and savings.",
+          "detail": "Provides actionable insights to help users make informed financial decisions."
+        }
+      ],
+      "technologies": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Python",
+        "MongoDB",
+        "Tailwind CSS"
+      ],
+      "links": {
+        "github": "https://github.com/Saurabhsing21/Wealth-",
+        "live": "https://welth-roan.vercel.app/",
+        "demo": "YOUR_VIDEO_DEMO_LINK_HERE"
+      },
+      "image": "/project/wealth.png",
+      "video": "YOUR_VIDEO_URL_HERE"
+    },
+    {
+      "title": "Crime Alert",
+      "role": "Full Stack Developer",
+      "techStack": ["Artificial Intelligence", "Technology"],
+      "date": "Nov. 2023 - Dec. 2024",
+      "shortDescription": "A full-stack application built with Next.js 14 for anonymous crime reporting with AI-powered features and location mapping.",
+      "overview": "Crime alert is a full-stack application built with Next.js 14, a powerful React framework that supports server-side rendering, static site generation, and incremental static regeneration. The platform prioritizes user anonymity and security, integrating Google's Gemini AI to assist with incident reporting, Mapbox for location-based features, and modern web technologies like TypeScript, Tailwind CSS, NextAuth, and Prisma ORM. SafeReport offers a seamless, responsive interface that works across all devices, making it accessible and efficient for reporting incidents securely.",
+      "keyFeatures": [
+        {
+          "name": "AI-Powered Reporting",
+          "description": "Google's Gemini AI analyzes input and suggests detailed, structured incident descriptions.",
+          "detail": "This reduces user effort and ensures reports are clear and actionable."
+        },
+        {
+          "name": "Full Anonymity",
+          "description": "No personal data is collected, allowing users to report with complete privacy.",
+          "detail": "Next.js server-side logic ensures submissions remain untraceable to individuals."
+        },
+        {
+          "name": "Location Mapping",
+          "description": "Mapbox integration offers interactive maps for precise incident location tagging.",
+          "detail": "Users can search and pin locations, enhancing report accuracy and usefulness"
+        },
+        {
+          "name": "Secure Authentication",
+          "description": "NextAuth provides robust OAuth-based login for admin users only.",
+          "detail": "This keeps the platform secure while preserving anonymity for reporters"
+        },
+        {
+          "name": "Responsive Design",
+          "description": "Tailwind CSS powers a mobile-first, adaptive UI for all screen sizes.",
+          "detail": "Cross-device compatibility ensures accessibility anytime, anywhere."
+        },
+        {
+          "name": "Data Safety",
+          "description": "Prisma ORM encrypts and manages report data in a secure database.",
+          "detail": "Type-safe queries and schema design protect sensitive information effectively."
+        },
+        {
+          "name": "Real-Time Processing",
+          "description": "Next.js 14 API routes process submissions instantly with zero downtime.",
+          "detail": "Server-side rendering optimizes speed and reliability for every report."
+        }
+      ],
+      "mission": "Crime alert's mission is to create a safer world by providing a secure, anonymous platform for reporting incidents. By leveraging AI and modern web technologies, we aim to empower individuals to speak up without fear, fostering transparency and accountability in communities.",
+      "impact": "Crime alert has the potential to transform how incidents are reported and addressed. By offering a secure, anonymous platform, it encourages more people to come forward, increasing the volume and quality of reported data. This can lead to better crime prevention, faster response times, and improved community safety. The integration of AI simplifies the reporting process, making it more inclusive and user-friendly, while the focus on security ensures trust in the platform. Ultimately, SafeReport aims to create a ripple effect of positive change, where technology-driven transparency leads to safer, more connected communities.",
+      "technologies": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Prisma",
+        "Tailwind CSS",
+        "NextAuth",
+        "Mapbox"
+      ],
+      "links": {
+        "github": "https://github.com/Saurabhsing21/crime-report-ai",
+        "live": "https://crime-alert-app.vercel.app/",
+        "demo": "YOUR_VIDEO_DEMO_LINK_HERE"
+      },
+      "image": "/project/crimereport_ai.png",
+      "video": "YOUR_VIDEO_URL_HERE"
+    },
+    {
+      "title": "Yoom",
+      "role": "Full Stack Developer",
+      "techStack": ["Next.js", "TypeScript", "WebRTC"],
+      "date": "2024",
+      "shortDescription": "A modern Zoom clone crafted with Next.js and TypeScript, delivering a robust video conferencing experience.",
+      "overview": "Yoom is a modern Zoom clone crafted with Next.js and TypeScript, delivering a robust video conferencing experience. With real-time chat, responsive design, and extensive meeting controls. Authenticated via Clerk for secure access, it integrates social sign-on and traditional login methods, ensuring an intuitive and reliable platform for personal and professional use.",
+      "keyFeatures": [
+        {
+          "name": "Video Conferencing Core",
+          "description": "Hosts high-quality video calls with low latency using WebRTC.",
+          "detail": "Supports multiple participants with smooth audio and video synchronization."
+        },
+        {
+          "name": "Secure Authentication",
+          "description": "Clerk enables social sign-on (e.g., Google) and email/password logins.",
+          "detail": "Ensures user data privacy with secure session management and access control."
+        },
+        {
+          "name": "Real-Time Chat",
+          "description": "Offers in-meeting text chat for instant communication during calls.",
+          "detail": "Messages sync seamlessly across devices with Next.js server-side capabilities."
+        },
+        {
+          "name": "Responsive Design",
+          "description": "Built with shadcn, adapts flawlessly to desktops, tablets, and mobiles.",
+          "detail": "Provides a consistent, user-friendly experience across all screen sizes."
+        },
+        {
+          "name": "Meeting Recording",
+          "description": "Allows hosts to record sessions with a single click for later review.",
+          "detail": "Stores recordings securely, accessible only to authorized users"
+        },
+        {
+          "name": "Screen Sharing",
+          "description": "Enables sharing of full screens or specific apps during meetings.",
+          "detail": "Enhances collaboration with smooth, high-resolution streaming."
+        },
+        {
+          "name": "Participant Management",
+          "description": "Offers controls like mute, kick, or assign host privileges to attendees.",
+          "detail": "Empowers meeting organizers to maintain order and engagement effortlessly."
+        }
+      ],
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "React",
+        "WebRTC",
+        "Clerk",
+        "Tailwind CSS",
+        "shadcn/ui"
+      ],
+      "links": {
+        "github": "https://github.com/Saurabhsing21/yoom",
+        "live": "https://yoom.vercel.app/",
+        "demo": "YOUR_VIDEO_DEMO_LINK_HERE"
+      },
+      "image": "/project/yoom.png",
+      "video": "YOUR_VIDEO_URL_HERE"
+    },
+    {
+      "title": "Klimate",
+      "role": "Backend Developer",
+      "techStack": ["Weather API", "Geolocation", "Real-time Data"],
+      "date": "2024",
+      "shortDescription": "A comprehensive weather application that automatically detects your location and provides real-time weather data with 24-hour forecasts.",
+      "overview": "Klimate is a powerful weather application that combines geolocation technology with real-time weather APIs to deliver accurate, location-based weather information. With features like automatic location detection, 24-hour forecasts, graphical temperature visualization, and city search capabilities, Klimate provides users with all the weather information they need in an intuitive, cross-platform interface.",
+      "keyFeatures": [
+        {
+          "name": "Current Location Weather",
+          "description": "Automatically detects and displays weather for your exact location.",
+          "detail": "Uses geolocation to deliver real-time temperature, humidity, and conditions."
+        },
+        {
+          "name": "24-Hour Forecast",
+          "description": "Provides a detailed forecast for the next day with hourly updates.",
+          "detail": "Ensures users can plan ahead with confidence based on reliable data."
+        },
+        {
+          "name": "Graphical Temperature View",
+          "description": "Visualizes the next 24 hours' temperature in an interactive graph.",
+          "detail": "Offers a clear, at-a-glance understanding of daily temperature trends"
+        },
+        {
+          "name": "City Weather Search",
+          "description": "Allows users to check weather for any city worldwide instantly.",
+          "detail": "Supports quick searches with predictive text for ease of use."
+        },
+        {
+          "name": "Cross-Platform Support",
+          "description": "Runs smoothly on iOS, Android, web, and desktop environments.",
+          "detail": "Syncs data across devices for a consistent experience anywhere."
+        },
+        {
+          "name": "Real-Time Updates",
+          "description": "Fetches the latest weather data as conditions change.",
+          "detail": "Keeps users informed with minimal delay using efficient API integration."
+        },
+        {
+          "name": "Customizable Interface",
+          "description": "Lets users adjust themes and units (e.g., Celsius or Fahrenheit).",
+          "detail": "Enhances usability by tailoring the app to personal preferences."
+        }
+      ],
+      "mission": "Klimate's mission is to provide accurate, real-time weather information to users worldwide, helping them make informed decisions about their daily activities. By combining cutting-edge geolocation technology with reliable weather APIs, we aim to deliver a seamless weather experience across all platforms.",
+      "impact": "Klimate empowers users to stay prepared for weather changes with accurate forecasts and real-time updates. The intuitive interface and cross-platform support make weather information accessible to everyone, while the graphical visualizations help users quickly understand temperature trends and plan their day accordingly.",
+      "technologies": [
+        "React Native",
+        "Weather API",
+        "Geolocation API",
+        "Chart.js",
+        "TypeScript",
+        "Node.js"
+      ],
+      "links": {
+        "github": "https://github.com/Saurabhsing21/Klimate",
+        "live": "",
+        "demo": "YOUR_VIDEO_DEMO_LINK_HERE"
+      },
+      "image": "/project/klimate.png",
+      "video": "YOUR_VIDEO_URL_HERE"
+    },
+    {
+      "title": "Apple Website",
+      "role": "Frontend Developer",
+      "techStack": ["React.js", "Three.js", "GSAP"],
+      "date": "2024",
+      "shortDescription": "A visually stunning recreation of Apple's iPhone 15 Pro landing page with seamless animations and interactive 3D models.",
+      "overview": "Apple Website is a visually stunning recreation of Apple's iPhone 15 Pro landing page, developed using React.js, Three.js, and GSAP. Featuring seamless animations, interactive 3D models via React Three Fiber, a custom video carousel, and full responsiveness, this project showcases advanced web technologies to deliver a premium, Apple-inspired experience.",
+      "keyFeatures": [
+        {
+          "name": "Dynamic 3D Models",
+          "description": "Three.js and React Three Fiber render interactive iPhone 15 Pro models.",
+          "detail": "Users can rotate and explore the device in real-time with smooth performance."
+        },
+        {
+          "name": "GSAP Animations",
+          "description": "GSAP powers fluid transitions and scroll-triggered effects throughout the site.",
+          "detail": "Enhances storytelling with cinematic reveals and engaging motion."
+        },
+        {
+          "name": "Video Carousel",
+          "description": "A custom GSAP-driven carousel showcases product videos seamlessly.",
+          "detail": "Auto-plays and loops with intuitive navigation for an immersive feel."
+        },
+        {
+          "name": "Full Responsiveness",
+          "description": "Adapts perfectly to all screen sizes, from mobile to desktop.",
+          "detail": "Maintains Apple's signature polish across devices with React.js optimization."
+        },
+        {
+          "name": "Interactive UI",
+          "description": "Clickable elements and hover effects elevate user engagement.",
+          "detail": "Built with React.js for a fast, component-driven interface."
+        },
+        {
+          "name": "Optimized Performance",
+          "description": "Leverages React's virtual DOM and Three.js efficiency for quick load times.",
+          "detail": "Ensures a lag-free experience even with complex animations and 3D rendering."
+        },
+        {
+          "name": "Modern Design Fidelity",
+          "description": "Replicates Apple's minimalist aesthetic with precise typography and layout.",
+          "detail": "Uses CSS and GSAP to mirror the premium look and feel of the original site."
+        }
+      ],
+      "mission": "Apple Website's mission is to demonstrate the power of modern web technologies in recreating a world-class user experience. We aim to inspire developers and Apple fans alike by blending creativity with cutting-edge tools like React.js, Three.js, and GSAP.",
+      "impact": "This project showcases how React.js, Three.js, and GSAP can elevate web design, potentially influencing how developers approach interactive, high-fidelity sites. By offering insights into its implementation, it empowers the community to build sophisticated, responsive experiences that rival industry leaders like Apple.",
+      "technologies": [
+        "React.js",
+        "Three.js",
+        "GSAP",
+        "React Three Fiber",
+        "Tailwind CSS",
+        "Vite"
+      ],
+      "links": {
+        "github": "https://github.com/Saurabhsing21/Iphonee",
+        "live": "https://iphone-ivory-zeta.vercel.app/",
+        "demo": "YOUR_VIDEO_DEMO_LINK_HERE"
+      },
+      "image": "/project/apple_website.jpg",
+      "video": "YOUR_VIDEO_URL_HERE"
+    }
+  ]
+}

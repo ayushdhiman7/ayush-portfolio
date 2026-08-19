@@ -1,0 +1,25 @@
+
+> sleek-portfolio@0.1.0 dev
+> next dev --turbopack -p 3001
+
+ ⚠ Found lockfile missing swc dependencies, patching...
+ ⨯ Failed to patch lockfile, please try uninstalling and reinstalling next in this workspace
+[TypeError: fetch failed] {
+  [cause]: [Error: getaddrinfo ENOTFOUND registry.npmjs.org] {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'registry.npmjs.org'
+  }
+}
+ ⨯ Failed to start server
+Error: listen EPERM: operation not permitted 0.0.0.0:3001
+    at <unknown> (Error: listen EPERM: operation not permitted 0.0.0.0:3001)
+    at new Promise (<anonymous>) {
+  code: 'EPERM',
+  errno: -1,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 3001
+}
+[?25h

@@ -1,0 +1,42 @@
+---
+title: 'Lumina'
+description: 'An AI search agent powered by a custom agent loop that intelligently decides when to use tools like Google/web search to gather real-time information.'
+image: '/project/lumina.png'
+technologies:
+  [
+    'Bun',
+    'Express',
+    'React',
+    'TypeScript',
+    'PostgreSQL',
+    'Prisma',
+    'Tailwind CSS',
+    'OpenRouter',
+    'Tavily',
+    'Supabase',
+  ]
+github: 'https://github.com/Saurabhsing21/Lumina'
+live: 'https://perpelexity.vercel.app/'
+timeline: '2026'
+role: 'AI Full Stack Engineer'
+team: 'Solo'
+status: 'completed'
+featured: true
+isPublished: true
+---
+
+# Lumina: Production-Style AI Search Assistant
+
+## Overview
+
+Lumina is a production-style AI search assistant featuring a tool-calling agent loop, live web search, cited markdown answers, and a streaming UI.
+
+## Key Features
+
+- **Tool-first agent loop**: The LLM decides when to search; no forced pre-search on every query.
+- **Live web search**: Powered via Tavily with basic and advanced depth modes (`search` vs `research`).
+- **Streamed, cited answers**: NDJSON streaming with inline `[1][2]` citations tied directly to real sources.
+- **Conversation memory**: Preserves context (last 20 messages) while stripping source markers before model evaluation.
+- **Multi-model routing**: Dynamic selection between GPT-4.1, Claude Sonnet 4, and Gemini 2.5 Flash via OpenRouter.
+- **Auth & credits**: Supabase JWT authentication with server-side per-user credit limits.
+- **Follow-up suggestions**: Generates suggested next questions at the conclusion of each response.

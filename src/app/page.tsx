@@ -5,7 +5,6 @@ import Achievements from '@/components/landing/Achievements';
 import Blog from '@/components/landing/Blog';
 import Experience from '@/components/landing/Experience';
 import Hero from '@/components/landing/Hero';
-import Newsletter from '@/components/landing/Newsletter';
 import OpenSourceContributions from '@/components/landing/OpenSourceContributions';
 import Work from '@/components/landing/Projects';
 import Skills from '@/components/landing/Skills';
@@ -30,7 +29,6 @@ export default function page() {
         <Blog />
         <Testimonials />
         <AboutMe />
-        <Newsletter />
 
         <SectionDivider />
         <Quote />

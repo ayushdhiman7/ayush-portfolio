@@ -111,16 +111,6 @@ export const pageMetadata: Record<string, PageMeta> = {
     twitterCard: 'summary',
   },
 
-  // Gears page
-  '/gears': {
-    title: 'Gears Used - Hardware & Tools',
-    description:
-      'The devices, software, and browser extensions I use daily as an AI full-stack engineer.',
-    keywords: ['gears', 'setup', 'hardware', 'tools', 'macbook', 'workflow'],
-    ogImage: '/meta/gears.png',
-    twitterCard: 'summary_large_image',
-  },
-
   // Editor setup page
   '/setup': {
     title: 'VS Code / Cursor Setup',

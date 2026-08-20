@@ -1,7 +1,6 @@
 'use client';
 
 import { settingsJson, steps } from '@/config/Setup';
-import { Link } from 'next-view-transitions';
 import React, { useState } from 'react';
 
 import DashedHorizontalRule from '../common/DashedHorizontalRule';
@@ -22,8 +21,8 @@ export default function SetupContent() {
   return (
     <div className="pb-12">
       <p className="px-6 py-4 text-sm text-muted-foreground">
-        My daily VS Code / Cursor setup — fonts, extensions, and settings I
-        actually use while building AI apps.
+        My daily VS Code / Cursor setup — extensions, editor preferences, and
+        settings I actually use while building full-stack apps.
       </p>
 
       <DashedHorizontalRule />
@@ -42,21 +41,6 @@ export default function SetupContent() {
 
             <ul className="space-y-3 pl-11">
               {step.content.map((item, i) => {
-                if (item.type === 'download') {
-                  return (
-                    <li key={i} className="text-sm text-muted-foreground">
-                      Download{' '}
-                      <Link
-                        href={item.href!}
-                        className="font-medium text-foreground underline-offset-4 hover:underline"
-                      >
-                        {item.name}
-                      </Link>
-                      {item.description ? ` — ${item.description}` : null}
-                    </li>
-                  );
-                }
-
                 if (item.type === 'shortcut' || item.type === 'prompt') {
                   return (
                     <li key={i}>

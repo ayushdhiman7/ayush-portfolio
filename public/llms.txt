@@ -1,15 +1,15 @@
-# Saurabh Singh
+# Ayush Kumar
 
-> AI Full Stack Engineer — Applied AI, GenAI, and Agentic systems.
+> Software Engineer — Full Stack, Backend, and Frontend development.
 
 ## Links
 
-- Portfolio: https://saurabh.dev (update with your domain)
-- GitHub: https://github.com/Saurabhsing21
-- LinkedIn: https://www.linkedin.com/in/gitsaurabhsingh/
-- X: https://x.com/gitsaurabh0
-- Email: saurabhsingh881888@gmail.com
+- Portfolio: https://ayush.dev (update with your domain)
+- GitHub: https://github.com/ayushdhiman7
+- LinkedIn: https://www.linkedin.com/in/ayush-kumar-47060a242
+- LeetCode: https://leetcode.com/u/BKOHeebYsT/
+- Email: ayush7dev@gmail.com
 
 ## Skills
 
-Python, TypeScript, React, Next.js, LangChain, Agentic AI, Docker, PostgreSQL, MongoDB, Node.js
+TypeScript, JavaScript, React, Vue, Node.js, Express.js, Laravel, PHP, MongoDB, MySQL, SQL, Tailwind CSS

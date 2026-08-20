@@ -2,13 +2,19 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Marquee } from '@/components/ui/marquee-01-utils/marquee';
 import { testimonials } from '@/config/Testimonials';
 
+const initials = (name: string) =>
+  name
+    .split(' ')
+    .map((part) => part[0])
+    .join('')
+    .slice(0, 2)
+    .toUpperCase();
+
 const ReviewCard = ({
-  profile,
   name,
   username,
   body,
 }: {
-  profile: string;
   name: string;
   username: string;
   body: string;
@@ -17,14 +23,9 @@ const ReviewCard = ({
     <Card className="relative h-full w-72 cursor-pointer overflow-hidden border-border bg-card p-4 shadow-none">
       <CardContent className="flex flex-col gap-2 p-0">
         <div className="flex flex-row items-center gap-2">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            className="size-8 rounded-full object-cover"
-            width={32}
-            height={32}
-            alt={name}
-            src={profile}
-          />
+          <div className="flex size-8 items-center justify-center rounded-full bg-muted text-xs font-semibold text-muted-foreground">
+            {initials(name)}
+          </div>
           <div className="flex min-w-0 flex-col">
             <p className="truncate text-sm font-medium text-foreground">
               {name}

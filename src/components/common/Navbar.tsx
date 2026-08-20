@@ -1,4 +1,5 @@
 import DashedHorizontalRule from '@/components/common/DashedHorizontalRule';
+import { Button } from '@/components/ui/button';
 import { navbarConfig } from '@/config/Navbar';
 import { Link } from 'next-view-transitions';
 import Image from 'next/image';
@@ -29,6 +30,11 @@ export default function Navbar() {
               </Link>
             ))}
           </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <Button variant="default" size="sm" className="rounded-full" asChild>
+            <Link href="/contact">Get in Touch</Link>
+          </Button>
         </div>
       </div>
       <DashedHorizontalRule />

@@ -3,38 +3,70 @@ import { Download, FileText, Settings } from 'lucide-react';
 export const steps = [
   {
     id: 1,
-    title: 'Download necessary files',
+    title: 'Install the extensions',
     icon: <Download className="size-4" />,
     content: [
       {
-        type: 'download',
-        name: 'Fira-code.zip',
-        description: "Unzip the font's file",
-        href: '/setup/fira-code.zip',
+        type: 'instruction',
+        text: 'Open the Extensions panel in VS Code / Cursor',
       },
       {
         type: 'instruction',
-        text: 'Select all the fonts, right click, and click to Install',
-      },
-      {
-        type: 'download',
-        name: 'vsc-extensions.txt',
-        description: 'Place this file in downloads',
-        href: '/setup/vsc-extensions.txt',
+        text: 'Search and install each extension below one by one',
       },
       {
         type: 'instruction',
-        text: 'Open the vscode in downloads directory',
+        text: 'Material Icon Theme — file icons',
       },
       {
         type: 'instruction',
-        text: 'Install VSC Export & Import extension in vs code.',
+        text: 'Vue - Official (Volar) — Vue support',
+      },
+      {
+        type: 'instruction',
+        text: 'PHP Intelephense + DEVSENSE PHP Tools — PHP/Laravel support',
+      },
+      {
+        type: 'instruction',
+        text: 'Tailwind CSS IntelliSense — Tailwind autocomplete',
+      },
+      {
+        type: 'instruction',
+        text: 'ES7+ React snippets — React snippets',
+      },
+      {
+        type: 'instruction',
+        text: 'Prettier — code formatter',
+      },
+      {
+        type: 'instruction',
+        text: 'ESLint — linting',
+      },
+      {
+        type: 'instruction',
+        text: 'GitLens + Git Graph — git history & blame',
+      },
+      {
+        type: 'instruction',
+        text: 'Error Lens — inline error highlighting',
+      },
+      {
+        type: 'instruction',
+        text: 'Thunder Client — API testing inside the editor',
+      },
+      {
+        type: 'instruction',
+        text: 'Live Server — instant local preview',
+      },
+      {
+        type: 'instruction',
+        text: 'WakaTime — automatic coding time tracking',
       },
     ],
   },
   {
     id: 2,
-    title: 'Installing all the extensions',
+    title: 'Editor preferences',
     icon: <FileText className="size-4" />,
     content: [
       {
@@ -47,15 +79,27 @@ export const steps = [
       },
       {
         type: 'instruction',
-        text: 'Enter the text in prompt and press Enter ⏎',
-      },
-      {
-        type: 'prompt',
-        text: 'VSC Export & Import',
+        text: 'Type "Preferences: Open User Settings" and press Enter ⏎',
       },
       {
         type: 'instruction',
-        text: 'All extension will start to install',
+        text: 'Set font size to 15 and tab size to 5',
+      },
+      {
+        type: 'instruction',
+        text: 'Enable Format on Save',
+      },
+      {
+        type: 'instruction',
+        text: 'Enable smooth cursor caret animation and smooth cursor blinking',
+      },
+      {
+        type: 'instruction',
+        text: 'Enable auto-save after delay',
+      },
+      {
+        type: 'instruction',
+        text: 'Use Material Icon Theme for file icons',
       },
     ],
   },
@@ -89,96 +133,29 @@ export const steps = [
 ];
 
 export const settingsJson = `{
-    "CodeGPT.model": "gpt-4",
-    "vscode-edge-devtools.webhint": false,
-    "editor.linkedEditing": true,
-    "editor.minimap.enabled": false,
-    "cmake.configureOnOpen": true,
-    "code-runner.runInTerminal": true,
-    "code-runner.saveFileBeforeRun": true,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "[html]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[css]": {
-      "editor.defaultFormatter": "HookyQR.beautify"
-    },
-    "explorer.confirmDragAndDrop": false,
-    "liveServer.settings.donotVerifyTags": true,
-    "github.copilot.advanced": {},
+    "editor.fontSize": 15,
+    "editor.tabSize": 5,
+    "files.autoSave": "afterDelay",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorBlinking": "smooth",
-    "files.autoSave": "afterDelay",
+    "explorer.confirmDelete": false,
+    "explorer.confirmPasteNative": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "github.copilot.nextEditSuggestions.enabled": true,
     "[javascript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "explorer.confirmDelete": false,
-    "editor.stickyScroll.enabled": false,
-    "git.autofetch": true,
-    "git.postCommitCommand": "push",
-    "workbench.iconTheme": "material-icon-theme",
-    
-    // Silence the Noise
-    "breadcrumbs.enabled": false,
-    "editor.hover.enabled": true,
-    "workbench.tips.enabled": false,
-    "editor.colorDecorators": false,
-    "workbench.startupEditor": "none",
-    "editor.lightbulb.enabled": "off",
-    "editor.overviewRulerBorder": false,
-    "editor.renderLineHighlight": "none",
-    "editor.occurrencesHighlight": "off",
-    "problems.decorations.enabled": false,
-    "editor.renderControlCharacters": false,
-    "editor.hideCursorInOverviewRuler": true,
-    "editor.gotoLocation.multipleReferences": "goto",
-    "editor.gotoLocation.multipleDefinitions": "goto",
-    "editor.gotoLocation.multipleDeclarations": "goto",
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "editor.gotoLocation.multipleImplementations": "goto",
-    "editor.gotoLocation.multipleTypeDefinitions": "goto",
-  
-    "vscode_custom_css.imports": [
-      "file:///E:/vscode/custom-vscode.css",
-      "file:///E:/vscode/custom-vscode-script.js"
-    ],
-  
-    "[typescriptreact]": {
+    "[css]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.fontFamily": ""fira code", Consolas, 'Courier New', monospace",
-    "workbench.statusBar.visible": false,
-    "[javascriptreact]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "[vue]": {
+      "editor.defaultFormatter": "Vue.volar"
     },
-    "git-auto-pull.watchForChanges": true,
-    "git-auto-pull.pullInterval": 2,
-    "[json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "editor.defaultFormatter": "HookyQR.beautify",
-    "editor.formatOnSave": true,
-    "eslint.run": "onSave",
-    "cSpell.userWords": [
-      "autofetch",
-      "Consolas",
-      "donot",
-      "esbenp",
-      "fileupload",
-      "fira",
-      "tabnine",
-      "webhint"
-    ],
-    "workbench.settings.applyToAllProfiles": [
-      "github.copilot.editor.enableAutoCompletions"
-    ],
-    "emmet.triggerExpansionOnTab": true,
-    "emmet.useInlineCompletions": true,
-    "tailwindCSS.emmetCompletions": true,
-    "workbench.colorTheme": "Night Owl (No Italics)",
-    "editor.wordWrap": "wordWrapColumn",
-    "reactSnippets.settings.importReactOnTop": false,
-    "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "[php]": {
+      "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
     }
   }`;

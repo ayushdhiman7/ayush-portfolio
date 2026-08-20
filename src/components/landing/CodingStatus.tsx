@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface CodingStats {
   isOnline: boolean;
@@ -16,7 +16,7 @@ export default function CodingStatus() {
   const [stats, setStats] = useState<CodingStats | null>(null);
   const [loading, setLoading] = useState(true);
   const [showDetails, setShowDetails] = useState(false);
-  const [isHovering, setIsHovering] = useState(false);
+  const hoveringRef = useRef(false);
 
   useEffect(() => {
     const fetchStats = async () => {
@@ -47,7 +47,7 @@ export default function CodingStatus() {
   const handleClick = () => {
     setShowDetails(true);
     setTimeout(() => {
-      if (!isHovering) {
+      if (!hoveringRef.current) {
         setShowDetails(false);
       }
     }, 5000);
@@ -55,16 +55,16 @@ export default function CodingStatus() {
 
   // Handle mouse enter
   const handleMouseEnter = () => {
-    setIsHovering(true);
+    hoveringRef.current = true;
     setShowDetails(true);
   };
 
   // Handle mouse leave
   const handleMouseLeave = () => {
-    setIsHovering(false);
+    hoveringRef.current = false;
     // Only hide if not clicked recently (handled by timeout)
     setTimeout(() => {
-      if (!isHovering) {
+      if (!hoveringRef.current) {
         setShowDetails(false);
       }
     }, 100);
@@ -111,7 +111,10 @@ export default function CodingStatus() {
             />
             <span className="text-sm font-medium text-foreground">
               {stats.isOnline ? 'Online' : 'Offline'} in{' '}
-              <span className="inline-flex items-center gap-1">
+              <span className="inline-flex items-center gap-1 ">
+                <span className="font-bold text-foreground">
+                  {stats.currentEditor}
+                </span>
                 <svg
                   className="size-4"
                   viewBox="0 0 24 24"
@@ -134,7 +137,6 @@ export default function CodingStatus() {
                     strokeLinecap="round"
                   />
                 </svg>
-                {stats.currentEditor}
               </span>
             </span>
           </div>

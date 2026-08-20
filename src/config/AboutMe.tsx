@@ -1,5 +1,5 @@
 import Code from '@/components/svgs/Code';
-import Gear from '@/components/svgs/Gear';
+import Mail from '@/components/svgs/Mail';
 import React from 'react';
 
 export interface AboutMeItem {
@@ -37,12 +37,6 @@ function FilmIcon({ className }: { className?: string }) {
 
 export const aboutMeItems: AboutMeItem[] = [
   {
-    title: 'Gears Used',
-    description: 'Productivity tools and gear I use to get work done.',
-    href: '/gears',
-    icon: <Gear className="size-4" />,
-  },
-  {
     title: 'VS Code / Cursor Setup',
     description: 'Editor setup I use daily.',
     href: '/setup',
@@ -53,5 +47,11 @@ export const aboutMeItems: AboutMeItem[] = [
     description: 'Films and shows I enjoy when not coding.',
     href: '/movies',
     icon: <FilmIcon className="size-4" />,
+  },
+  {
+    title: 'Get in Touch',
+    description: 'Have a project or opportunity? Let&apos;s talk.',
+    href: '/contact',
+    icon: <Mail className="size-4" />,
   },
 ];

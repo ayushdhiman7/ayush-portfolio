@@ -3,7 +3,7 @@ import TestimonialMarquee from '@/components/ui/marquee-01';
 import React from 'react';
 
 /**
- * Testimonials — section word title replaced by the newsletter hatch /
+ * Testimonials — section word title replaced by a hatch /
  * cross-line band between dashed rules.
  */
 export default function Testimonials() {

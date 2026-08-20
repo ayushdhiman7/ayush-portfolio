@@ -2,7 +2,6 @@
 
 import DashedHorizontalRule from '@/components/common/DashedHorizontalRule';
 import { footerConfig, footerSocials } from '@/config/Footer';
-import { Link } from 'next-view-transitions';
 import React, { useEffect, useState } from 'react';
 
 function formatOrdinal(n: number): string {
@@ -27,12 +26,14 @@ export default function Footer() {
       <div className="flex items-center justify-center gap-0">
         {footerConfig.links.map((link) => (
           <React.Fragment key={link.name}>
-            <Link
+            <a
               href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-4 py-3 text-xs text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
-            </Link>
+            </a>
             <span
               aria-hidden="true"
               className="h-4 w-px bg-[var(--dashed-border)] opacity-60"

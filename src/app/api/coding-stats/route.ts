@@ -4,7 +4,7 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 300; // Cache for 5 minutes
 
 interface WakatimeResponse {
-  data: {
+  data: Array<{
     grand_total: {
       digital: string;
       hours: number;
@@ -12,7 +12,7 @@ interface WakatimeResponse {
       text: string;
       total_seconds: number;
     };
-  };
+  }>;
 }
 
 export async function GET() {
@@ -46,7 +46,7 @@ export async function GET() {
     }
 
     const data: WakatimeResponse = await response.json();
-    const grandTotal = data.data?.grand_total;
+    const grandTotal = data.data?.[0]?.grand_total;
 
     // Format time
     const hours = grandTotal?.hours || 0;

@@ -5,21 +5,21 @@ import React from 'react';
 import Container from '../common/Container';
 import SectionHeading from '../common/SectionHeading';
 import Code from '../svgs/Code';
-import Gear from '../svgs/Gear';
+import Mail from '../svgs/Mail';
 import { Card } from '../ui/card';
 
 const setup = [
-  {
-    name: 'Gears Used',
-    description: 'Productivity Tools, Gears i use to get my work done.',
-    icon: <Gear className="size-4" />,
-    href: '/gears',
-  },
   {
     name: 'VS Code / Cursor Setup',
     description: 'VS Code / Cursor Setup i use daily.',
     icon: <Code className="size-4" />,
     href: '/setup',
+  },
+  {
+    name: 'Get in Touch',
+    description: 'Have a project or opportunity? Let&apos;s talk.',
+    icon: <Mail className="size-4" />,
+    href: '/contact',
   },
 ];
 

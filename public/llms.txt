@@ -4,7 +4,7 @@
 
 ## Links
 
-- Portfolio: https://ayush.dev (update with your domain)
+- Portfolio: https://ayushdhiman7.vercel.app/ 
 - GitHub: https://github.com/ayushdhiman7
 - LinkedIn: https://www.linkedin.com/in/ayush-kumar-47060a242
 - LeetCode: https://leetcode.com/u/BKOHeebYsT/

@@ -2,7 +2,6 @@ import SectionDivider from '@/components/common/SectionDivider';
 import { Quote } from '@/components/common/Quote';
 import AboutMe from '@/components/landing/AboutMe';
 import Achievements from '@/components/landing/Achievements';
-import Blog from '@/components/landing/Blog';
 import Experience from '@/components/landing/Experience';
 import Hero from '@/components/landing/Hero';
 import OpenSourceContributions from '@/components/landing/OpenSourceContributions';
@@ -11,7 +10,7 @@ import Skills from '@/components/landing/Skills';
 import Testimonials from '@/components/landing/Testimonials';
 import React from 'react';
 
-/** Keep homepage blog preview in sync with Dev.to publishes */
+/** Keep homepage blog preview fresh */
 export const revalidate = 3600;
 
 export default function page() {
@@ -26,7 +25,6 @@ export default function page() {
         <OpenSourceContributions />
         <Skills />
         <Achievements />
-        <Blog />
         <Testimonials />
         <AboutMe />
 

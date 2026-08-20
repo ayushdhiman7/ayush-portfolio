@@ -19,9 +19,5 @@ export const navbarConfig = {
       label: 'Projects',
       href: '/projects',
     },
-    {
-      label: 'Blogs',
-      href: '/blog',
-    },
   ] as NavItem[],
 };

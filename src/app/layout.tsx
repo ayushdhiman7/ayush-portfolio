@@ -1,6 +1,6 @@
 import UmamiAnalytics from '@/components/analytics/UmamiAnalytics';
 import BackToTop from '@/components/common/BackToTop';
-import ChatBubble from '@/components/common/ChatBubble';
+// import ChatBubble from '@/components/common/ChatBubble';
 import Footer from '@/components/common/Footer';
 import Navbar from '@/components/common/Navbar';
 import OnekoCat from '@/components/common/OnekoCat';

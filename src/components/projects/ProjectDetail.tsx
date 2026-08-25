@@ -169,12 +169,12 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           disabled={!live && !project.link}
           showDivider
         />
-        <ActionCell
+        {/* <ActionCell
           href={post}
           icon={<PostIcon className="size-3.5" />}
           label="Post"
           disabled={!post}
-        />
+        /> */}
       </div>
 
       <DashedHorizontalRule />

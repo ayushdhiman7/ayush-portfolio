@@ -3,6 +3,10 @@ import ChatGPT from '@/components/technologies/ChatGPT';
 import Clerk from '@/components/technologies/Clerk';
 import Docker from '@/components/technologies/Docker';
 import ExpressJs from '@/components/technologies/ExpressJs';
+import Css from "@/components/technologies/CSS";
+import Js from "@/components/technologies/JavaScript";
+import NodeJs from "@/components/technologies/NodeJs";
+import Vite from "@/components/technologies/Vite";
 import FastAPI from '@/components/technologies/FastAPI';
 import GSAP from '@/components/technologies/GSAP';
 import HuggingFace from '@/components/technologies/HuggingFace';
@@ -21,9 +25,43 @@ import ThreeJs from '@/components/technologies/ThreeJs';
 import TypeScript from '@/components/technologies/TypeScript';
 import WebRTC from '@/components/technologies/WebRTC';
 import { Project } from '@/types/project';
+import Html from '@/components/technologies/Html';
 
 export const projects: Project[] = [
   {
+  title: "Wave AI",
+  description: "Ask questions, chat with AI, and explore the possibilities of AI-powered conversation using Hugging Face inference with Qwen/Qwen3-4B-Thinking-2507:nscale model. A modern web application built with React, Vite, and Tailwind CSS.",
+  image: "/project/wave.png",
+  link: "https://github.com/ayushdhiman7/wave-ai",
+  technologies: [
+    { name: "React", icon: <ReactIcon key="react" /> },
+  { name: "Hugging Face", icon: <HuggingFace key="huggingface" /> },
+    { name: "Vite", icon: <Vite key="vite" /> },
+    { name: "Tailwind CSS", icon: <TailwindCss key="tailwindcss" /> },
+    { name: "Node.js", icon: <NodeJs key="nodejs" /> },
+    { name: "Express", icon: <ExpressJs key="express" /> },
+    { name: "JavaScript", icon: <Js key="js" /> },
+    { name: "HTML5", icon: <Html  /> },
+    { name: "CSS3", icon: <Css key="css" /> },
+  ],
+  github: "https://github.com/ayushdhiman7/wave-ai",
+  live: "https://wave-ai-two.vercel.app",
+  details: true,
+  projectDetailsPageSlug: "/projects/wave-ai",
+  isWorking: true,
+  detailContent: {
+    overview: "Wave AI is a modern AI-powered chat application built with a sandbox architecture featuring a React frontend, Vite build tool, and Tailwind CSS styling. It provides a seamless conversational AI experience with context-aware responses and a clean, intuitive interface, using Hugging Face inference with the Qwen/Qwen3-4B-Thinking-2507:nscale model.",
+    highlightsLabel: "Wave AI features:",
+    highlights: [
+      "AI Chat: Powerful AI conversations with context awareness",
+      "Responsive Design: Works beautifully on mobile and desktop",
+      "Modern UI: Clean, intuitive interface built with Tailwind CSS",
+      "Route-based Navigation: Home, Pricing, Roadmap, and Chat pages",
+      "AI-powered Features: Smart chatbot with personalized recommendations",
+    ],
+    outcome: "A production-style AI chat application offering real-time conversational AI with low-latency streaming and a clean, intuitive interface.",
+  },
+}, {
     title: 'Nirdesh AI',
     description:
       'Nirdesh AI - A multilingual voice agent platform with real-time STT, LangGraph orchestration, and streaming TTS, featuring local VAD and production session instrumentation.'

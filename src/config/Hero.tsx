@@ -117,7 +117,7 @@ export const heroConfig = {
     {
       variant: 'default',
       text: 'Book an intro call',
-      href: 'https://cal.com/gitsaurabh/discovery-call',
+      href: 'https://cal.com/gitayush/contact',
       icon: 'Calendar',
     },
     {

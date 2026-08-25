@@ -56,6 +56,7 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -84,6 +85,7 @@ export default function ContactForm() {
       if (response.ok) {
         toast.success('Message sent successfully!');
         form.reset();
+        setShowSuccess(true);
       } else {
         toast.error(
           result.error || 'Failed to send message. Please try again.',
@@ -187,6 +189,11 @@ export default function ContactForm() {
                 </>
               )}
             </Button>
+{showSuccess && (
+              <div className="mt-3 p-4 bg-green-100 text-green-800 rounded border border-green-200">
+                Message sent successfully! I'll get back to you soon.
+              </div>
+)}
           </form>
         </Form>
       </CardContent>

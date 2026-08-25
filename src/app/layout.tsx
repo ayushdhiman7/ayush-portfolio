@@ -33,7 +33,7 @@ export default function RootLayout({
               {children}
               <Footer />
               <OnekoCat />
-              <ChatBubble />
+              {/* <ChatBubble /> */}
               <BackToTop />
               <UmamiAnalytics />
             </ReactLenis>

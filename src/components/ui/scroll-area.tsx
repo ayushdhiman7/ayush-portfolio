@@ -2,7 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import * as ScrollAreaPrimitive from '@radix-ui/react-scroll-area';
-import type Lenis from 'lenis';
+import Lenis from 'lenis';
 import * as React from 'react';
 
 function ScrollArea({
@@ -11,7 +11,7 @@ function ScrollArea({
   ...props
 }: React.ComponentProps<typeof ScrollAreaPrimitive.Root>) {
   const viewportRef = React.useRef<HTMLDivElement | null>(null);
-  const [lenisInstance, setLenisInstance] = React.useState<Lenis | null>(null);
+  const lenisRef = React.useRef<Lenis | null>(null);
 
   React.useEffect(() => {
     type WindowWithLenis = Window & { lenis?: Lenis };
@@ -19,19 +19,19 @@ function ScrollArea({
       typeof window !== 'undefined' &&
       (window as unknown as WindowWithLenis).lenis
     ) {
-      setLenisInstance((window as unknown as WindowWithLenis).lenis!);
+      lenisRef.current = (window as unknown as WindowWithLenis).lenis;
     }
   }, []);
 
   const onMouseEnter = () => {
-    if (lenisInstance) {
-      lenisInstance.stop(); // Stop Lenis scrolling when mouse inside chat
+    if (lenisRef.current) {
+      lenisRef.current.stop(); // Stop Lenis scrolling when mouse inside chat
     }
   };
 
   const onMouseLeave = () => {
-    if (lenisInstance) {
-      lenisInstance.start(); // Resume Lenis scrolling when mouse leaves chat
+    if (lenisRef.current) {
+      lenisRef.current.start(); // Resume Lenis scrolling when mouse leaves chat
     }
   };
 

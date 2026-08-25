@@ -1,14 +1,9 @@
-# Sleek Portfolio by ramxcodes
+# Ayush Portfolio 
 
-A modern, responsive portfolio website built with Next.js 15, TypeScript, Tailwind CSS, and Shadcn UI. Features a blog system, project showcase, work experience timeline, and contact form with Telegram integration.
+A modern, responsive portfolio website built with Next.js 15, TypeScript, Tailwind CSS, and Shadcn UI. Features a blog system, project showcase, work experience timeline.
 
 ![Portfolio Preview](/public/meta/hero.png)
 
-## Deploy
-
-Click here to your portfolio template now:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Framxcodes%2Fsleek-portfolio&env=TELEGRAM_BOT_TOKEN,TELEGRAM_CHAT_ID,GEMINI_API_KEY,NEXT_PUBLIC_URL,NEXT_PUBLIC_UMAMI_SRC,NEXT_PUBLIC_UMAMI_ID)
 
 ## Features
 
@@ -17,7 +12,6 @@ Click here to your portfolio template now:
 - **Shadcn UI** components
 - **Dark/Light** mode
 - **Responsive** design
-- **MDX** for blog posts and project details
 - **Contact Form** with Telegram integration
 - **SEO** optimized
 - **TypeScript** for type safety
@@ -38,10 +32,15 @@ Create a `.env` file in the root directory with the following variables:
 TELEGRAM_BOT_TOKEN="your-token"
 TELEGRAM_CHAT_ID="your-chat-id"
 GEMINI_API_KEY="your-api-key"
+SPOTIFY_CLIENT_ID="your-spotify-client-id"
+SPOTIFY_CLIENT_SECRET="your-spotify-client-secret"
+SPOTIFY_REFRESH_TOKEN="your-spotify-refresh-token"
 NODE_ENV="development"
 NEXT_PUBLIC_URL="http://localhost:3000"
 NEXT_PUBLIC_UMAMI_SRC="your-umami-script-url"
 NEXT_PUBLIC_UMAMI_ID="your-umami-website-id"
+WAKATIME_API_KEY="your-walk-time-key"
+
 ```
 
 ### Setting up Telegram Integration
@@ -82,8 +81,7 @@ NEXT_PUBLIC_UMAMI_ID="your-umami-website-id"
 
    ```bash
    git clone https://github.com/ramxcodes/sleek-portfolio.git
-   cd sleek-portfolio
-   ```
+   cd ayush-portfolio-main
 
 2. Install dependencies:
 
@@ -141,18 +139,8 @@ export const NewTechIcon = () => {
 
 ## Adding Content
 
-### Blog Posts
-
-1. Create a new MDX file in `src/data/blog/`
-2. Add metadata and content following existing post structure
-3. Add blog thumbnail in `public/blog/`
-
 ### Projects
 
 1. Create a new MDX file in `src/data/projects/`
 2. Add metadata and content following existing project structure
 3. Add project thumbnail in `public/project/`
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

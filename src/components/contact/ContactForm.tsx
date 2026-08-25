@@ -191,6 +191,7 @@ export default function ContactForm() {
             </Button>
 {showSuccess && (
               <div className="mt-3 p-4 bg-green-100 text-green-800 rounded border border-green-200">
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
                 Message sent successfully! I'll get back to you soon.
               </div>
 )}

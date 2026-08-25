@@ -64,8 +64,8 @@ export const projects: Project[] = [
 }, {
     title: 'Nirdesh AI',
     description:
-      'Nirdesh AI - A multilingual voice agent platform with real-time STT, LangGraph orchestration, and streaming TTS, featuring local VAD and production session instrumentation.'
-    image: '/project/wave.png',
+      'Nirdesh AI - A multilingual voice agent platform with real-time STT, LangGraph orchestration, and streaming TTS, featuring local VAD and production session instrumentation.',
+    image: '',
     link: 'https://github.com/Saurabhsing21/NirdeshAI',
     technologies: [
       { name: 'FastAPI', icon: <FastAPI key="fastapi" /> },

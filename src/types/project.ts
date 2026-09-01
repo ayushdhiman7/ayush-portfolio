@@ -18,8 +18,6 @@ export interface Project {
   technologies: { name: string; icon: React.ReactNode }[];
   github?: string;
   live: string;
-  /** Optional write-up / blog URL shown in the Post action slot */
-  post?: string;
   details: boolean;
   /** Curated case-study content for the project detail page */
   detailContent?: ProjectDetails;

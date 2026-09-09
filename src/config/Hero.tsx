@@ -123,7 +123,7 @@ export const heroConfig = {
     {
       variant: 'outline',
       text: 'Check my resume',
-      href: '/resume/Ayush_Kumar_resume.pdf',
+      href: '/resume/ayush.pdf',
       icon: 'CV',
     },
   ],

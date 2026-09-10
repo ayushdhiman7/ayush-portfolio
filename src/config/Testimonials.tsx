@@ -23,11 +23,11 @@ export const testimonials: Testimonial[] = [
   {
     name: 'Vikram Singh',
     username: 'Full Stack Lead @ Swiggy',
-    body: 'Comfortable across the whole stack — React on the front, Laravel and MySQL behind it. He ships thoughtfully, writes SQL that scales, and explains tradeoffs with refreshing clarity.',
+    body: 'Comfortable across the whole stack — React on the front, Node js and MySQL behind it. He ships thoughtfully, writes SQL that scales, and explains tradeoffs with refreshing clarity.',
   },
   {
     name: 'Kavya Reddy',
     username: 'Engineering Manager @ CRED',
-    body: 'He owns features end to end and moves fast without cutting corners — from polished Vue and React interfaces to dependable Node and PHP backends. Watching his ownership and pace was genuinely impressive.',
+    body: 'He owns features end to end and moves fast without cutting corners — from polished Vue and React interfaces to dependable Node and P backends. Watching his ownership and pace was genuinely impressive.',
   },
 ];

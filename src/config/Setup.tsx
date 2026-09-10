@@ -22,10 +22,7 @@ export const steps = [
         type: 'instruction',
         text: 'Vue - Official (Volar) — Vue support',
       },
-      {
-        type: 'instruction',
-        text: 'PHP Intelephense + DEVSENSE PHP Tools — PHP/Laravel support',
-      },
+      
       {
         type: 'instruction',
         text: 'Tailwind CSS IntelliSense — Tailwind autocomplete',
@@ -154,8 +151,5 @@ export const settingsJson = `{
     },
     "[vue]": {
       "editor.defaultFormatter": "Vue.volar"
-    },
-    "[php]": {
-      "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
     }
   }`;

@@ -2,11 +2,11 @@ import Docker from '@/components/technologies/Docker';
 import ExpressJs from '@/components/technologies/ExpressJs';
 import Html from '@/components/technologies/Html';
 import JavaScript from '@/components/technologies/JavaScript';
-import Laravel from '@/components/technologies/Laravel';
 import MongoDB from '@/components/technologies/MongoDB';
 import MySQL from '@/components/technologies/MySQL';
+import NestJs from '@/components/technologies/NestJs';
+import NextJs from '@/components/technologies/NextJs';
 import NodeJs from '@/components/technologies/NodeJs';
-import Php from '@/components/technologies/Php';
 import ReactIcon from '@/components/technologies/ReactIcon';
 import TailwindCss from '@/components/technologies/TailwindCss';
 import TypeScript from '@/components/technologies/TypeScript';
@@ -47,25 +47,35 @@ export const experiences: Experience[] = [
     location: 'Mohali',
     image: '/company/uimatic.jpeg',
     description: [
-      'Developing and maintaining RESTful APIs using Laravel (PHP) for production e-commerce platforms, contributing to a multi-tenant architecture that enables multiple stores and clients to operate within a single platform. Building the e-commerce frontend using Vue.js with Pinia state management and integrating backend APIs to support core shopping functionality, along with online payments via PayMongo and delivery management through Lalamove services.',
+      'Developing and maintaining RESTful APIs using Node js  for production e-commerce platforms, contributing to a multi-tenant architecture that enables multiple stores and clients to operate within a single platform. Building the e-commerce frontend using Vue.js with Pinia state management and integrating backend APIs to support core shopping functionality, along with online payments via PayMongo and delivery management through Lalamove services.',
     ],
     startDate: 'May 2025',
     endDate: 'Present',
     technologies: [
       {
-        name: 'Laravel',
-        href: 'https://laravel.com/',
-        icon: <Laravel />,
+        name: 'Node.js',
+        href: 'https://nodejs.org/',
+        icon: <NodeJs />,
+      },
+      {
+        name: 'Next.js',
+        href: 'https://nextjs.org/',
+        icon: <NextJs />,
+      },
+      {
+        name: 'NestJS',
+        href: 'https://nestjs.com/',
+        icon: <NestJs />,
+      },
+      {
+        name: 'React',
+        href: 'https://react.dev/',
+        icon: <ReactIcon />,
       },
       {
         name: 'Vue',
         href: 'https://vuejs.org/',
         icon: <Vue />,
-      },
-      {
-        name: 'PHP',
-        href: 'https://www.php.net/',
-        icon: <Php />,
       },
       {
         name: 'MySQL',

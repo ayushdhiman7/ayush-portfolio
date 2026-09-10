@@ -6,12 +6,10 @@ import Git from '@/components/technologies/Git';
 import Github from '@/components/technologies/Github';
 import Html from '@/components/technologies/Html';
 import JavaScript from '@/components/technologies/JavaScript';
-import Laravel from '@/components/technologies/Laravel';
 import Linux from '@/components/technologies/Linux';
 import MongoDB from '@/components/technologies/MongoDB';
 import MySQL from '@/components/technologies/MySQL';
 import NodeJs from '@/components/technologies/NodeJs';
-import Php from '@/components/technologies/Php';
 import PostgreSQL from '@/components/technologies/PostgreSQL';
 import Postman from '@/components/technologies/Postman';
 import ReactIcon from '@/components/technologies/ReactIcon';
@@ -66,16 +64,6 @@ export const skills: SkillItem[] = [
     name: 'Express.js',
     href: 'https://expressjs.com/',
     icon: <ExpressJs />,
-  },
-  {
-    name: 'PHP',
-    href: 'https://www.php.net/',
-    icon: <Php />,
-  },
-  {
-    name: 'Laravel',
-    href: 'https://laravel.com/',
-    icon: <Laravel />,
   },
   {
     name: 'MongoDB',

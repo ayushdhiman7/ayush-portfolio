@@ -28,10 +28,8 @@ import LeetCode from '@/components/svgs/LeetCode';
 import LinkedIn from '@/components/svgs/LinkedIn';
 import ExpressJs from '@/components/technologies/ExpressJs';
 import JavaScript from '@/components/technologies/JavaScript';
-import Laravel from '@/components/technologies/Laravel';
 import MySQL from '@/components/technologies/MySQL';
 import NodeJs from '@/components/technologies/NodeJs';
-import Php from '@/components/technologies/Php';
 import ReactIcon from '@/components/technologies/ReactIcon';
 import SQL from '@/components/technologies/SQL';
 import TailwindCss from '@/components/technologies/TailwindCss';
@@ -47,8 +45,6 @@ export const skillComponents = {
   Vue: Vue,
   NodeJs: NodeJs,
   ExpressJs: ExpressJs,
-  Laravel: Laravel,
-  Php: Php,
   SQL: SQL,
   MySQL: MySQL,
   TailwindCss: TailwindCss,
@@ -88,11 +84,6 @@ export const heroConfig = {
       name: 'Vue',
       href: 'https://vuejs.org/',
       component: 'Vue',
-    },
-    {
-      name: 'Laravel',
-      href: 'https://laravel.com/',
-      component: 'Laravel',
     },
     {
       name: 'Node.js',

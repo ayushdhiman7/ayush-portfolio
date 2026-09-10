@@ -12,4 +12,4 @@
 
 ## Skills
 
-TypeScript, JavaScript, React, Vue, Node.js, Express.js, Laravel, PHP, MongoDB, MySQL, SQL, Tailwind CSS
+TypeScript, JavaScript, React, Vue, Node.js, Express.js,  MongoDB, MySQL, SQL, Tailwind CSS

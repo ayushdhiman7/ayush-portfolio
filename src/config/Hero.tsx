@@ -114,7 +114,7 @@ export const heroConfig = {
     {
       variant: 'outline',
       text: 'Check my resume',
-      href: '/resume/ayush cv.pdf',
+      href: '/resume/Ayush-SDE-I .pdf',
       icon: 'CV',
     },
   ],

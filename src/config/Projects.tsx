@@ -12,6 +12,9 @@ import NextAuth from '@/components/technologies/NextAuth';
 import NextJs from '@/components/technologies/NextJs';
 import Prisma from '@/components/technologies/Prisma';
 import ReactIcon from '@/components/technologies/ReactIcon';
+import Redis from '@/components/technologies/Redis';
+import Redux from '@/components/technologies/Redux';
+import SocketIo from '@/components/technologies/SocketIo';
 import TailwindCss from '@/components/technologies/TailwindCss';
 import ThreeJs from '@/components/technologies/ThreeJs';
 import TypeScript from '@/components/technologies/TypeScript';
@@ -19,6 +22,47 @@ import { Project } from '@/types/project';
 import Html from '@/components/technologies/Html';
 
 export const projects: Project[] = [
+  {
+    title: 'Flow',
+    description:
+      'A full-stack mini SaaS workspace inspired by Notion, Trello & Slack — kanban boards with drag & drop, real-time chat, notes, and role-based workspaces built with React 19, Express, MongoDB, and Socket.io.',
+    image: '/project/flow.png',
+    link: 'https://flow07.vercel.app/',
+    technologies: [
+      { name: 'React', icon: <ReactIcon key="react" /> },
+      { name: 'Vite', icon: <Vite key="vite" /> },
+      { name: 'Redux Toolkit', icon: <Redux key="redux" /> },
+      { name: 'Tailwind CSS', icon: <TailwindCss key="tailwindcss" /> },
+      { name: 'Express', icon: <ExpressJs key="express" /> },
+      { name: 'Node.js', icon: <NodeJs key="nodejs" /> },
+      { name: 'MongoDB', icon: <MongoDB key="mongodb" /> },
+      { name: 'Socket.io', icon: <SocketIo key="socketio" /> },
+      { name: 'Redis', icon: <Redis key="redis" /> },
+      { name: 'Docker', icon: <Docker key="docker" /> },
+    ],
+    github: 'https://github.com/ayushdhiman7/flow',
+    live: 'https://flow07.vercel.app/',
+    details: true,
+    projectDetailsPageSlug: '/projects/flow',
+    isWorking: true,
+    detailContent: {
+      overview:
+        'Flow is a production-style team workspace that combines the best of Notion, Trello, and Slack in one app. It ships a React 19 + Vite frontend with Redux Toolkit state management, and an Express + MongoDB backend secured with JWT refresh-token auth and workspace-scoped RBAC — all wired together with Socket.io for instant, multi-user updates.',
+      highlightsLabel: 'Flow includes:',
+      highlights: [
+        'Kanban boards with drag & drop (dnd-kit) and optimistic updates reconciled by the server',
+        'Real-time chat with channels and DMs, presence, and notifications over Socket.io',
+        'Workspaces with invite codes, join requests, and owner/admin/member role management',
+        'JWT authentication using httpOnly access + refresh token cookies with session tracking',
+        'Workspace notes with full-text search and pinning',
+        'REST API with Zod validation, audit logs, rate limiting, and Swagger/OpenAPI docs',
+        'Optional Redis + BullMQ background queues for email and notification jobs',
+        'Docker Compose orchestration plus GitHub Actions CI (lint → test → build)',
+      ],
+      outcome:
+        'A deployable full-stack SaaS demonstrating auth, RBAC, realtime collaboration, background jobs, and DevOps end to end — live on Vercel with a Render-ready API.',
+    },
+  },
   {
   title: "Wave AI",
   description: "Ask questions, chat with AI, and explore the possibilities of AI-powered conversation using Hugging Face inference with Qwen/Qwen3-4B-Thinking-2507:nscale model. A modern web application built with React, Vite, and Tailwind CSS.",

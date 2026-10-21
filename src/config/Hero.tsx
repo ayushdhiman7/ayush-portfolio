@@ -100,7 +100,7 @@ export const heroConfig = {
   // Description Configuration
   description: {
     template:
-      'I build <b>full-stack web applications</b> using {skills:0}, {skills:1}, {skills:2}, and {skills:3}. Specialized in <b>backend APIs</b>  and <b>scalable systems</b> with {skills:5}, backed by {skills:6} for production-ready products.',
+      'I build <b>full-stack web applications</b> using {skills:0}, {skills:1}, {skills:2}, and {skills:3}. Specialized in <b>backend APIs</b>  and <b>scalable systems</b> with {skills:5}, backed by {skills:4} for production-ready products.',
   },
 
   // Buttons Configuration
@@ -114,7 +114,7 @@ export const heroConfig = {
     {
       variant: 'outline',
       text: 'Check my resume',
-      href: '/resume/Ayush-SDE-I .pdf',
+      href: '/resume/Ayush-Kumar-Resume.pdf',
       icon: 'CV',
     },
   ],

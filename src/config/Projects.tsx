@@ -1,16 +1,22 @@
+import AWS from '@/components/technologies/AWS';
+import AgenticAI from '@/components/technologies/AgenticAI';
+import Css from '@/components/technologies/CSS';
 import Docker from '@/components/technologies/Docker';
 import ExpressJs from '@/components/technologies/ExpressJs';
-import Css from "@/components/technologies/CSS";
-import Js from "@/components/technologies/JavaScript";
-import NodeJs from "@/components/technologies/NodeJs";
-import Vite from "@/components/technologies/Vite";
 import GSAP from '@/components/technologies/GSAP';
+import Github from '@/components/technologies/Github';
+import Html from '@/components/technologies/Html';
 import HuggingFace from '@/components/technologies/HuggingFace';
+import Js from '@/components/technologies/JavaScript';
+import Linux from '@/components/technologies/Linux';
 import Mapbox from '@/components/technologies/Mapbox';
 import MongoDB from '@/components/technologies/MongoDB';
 import NextAuth from '@/components/technologies/NextAuth';
 import NextJs from '@/components/technologies/NextJs';
+import NodeJs from '@/components/technologies/NodeJs';
+import PostgreSQL from '@/components/technologies/PostgreSQL';
 import Prisma from '@/components/technologies/Prisma';
+import Python from '@/components/technologies/Python';
 import ReactIcon from '@/components/technologies/ReactIcon';
 import Redis from '@/components/technologies/Redis';
 import Redux from '@/components/technologies/Redux';
@@ -18,10 +24,51 @@ import SocketIo from '@/components/technologies/SocketIo';
 import TailwindCss from '@/components/technologies/TailwindCss';
 import ThreeJs from '@/components/technologies/ThreeJs';
 import TypeScript from '@/components/technologies/TypeScript';
+import Vite from '@/components/technologies/Vite';
 import { Project } from '@/types/project';
-import Html from '@/components/technologies/Html';
 
 export const projects: Project[] = [
+  {
+    title: 'ORB Paper Bot',
+    description:
+      'A paper-trading research system for an Opening Range Breakout strategy on NSE stocks — live quotes, fail-closed risk controls, an AI second opinion measured against a no-AI control, and an installable mobile dashboard.',
+    image: '/project/orb-terminal.png',
+    link: 'https://orb7.duckdns.org/',
+    technologies: [
+      { name: 'Python', icon: <Python key="python" /> },
+      { name: 'TypeScript', icon: <TypeScript key="typescript" /> },
+      { name: 'React', icon: <ReactIcon key="react" /> },
+      { name: 'Supabase (Postgres)', icon: <PostgreSQL key="postgres" /> },
+      { name: 'AWS EC2', icon: <AWS key="aws" /> },
+      { name: 'Vite', icon: <Vite key="vite" /> },
+      { name: 'Tailwind CSS', icon: <TailwindCss key="tailwindcss" /> },
+      { name: 'Linux + systemd', icon: <Linux key="linux" /> },
+      { name: 'GitHub Actions', icon: <Github key="github" /> },
+      { name: 'Gemini AI', icon: <AgenticAI key="gemini" /> },
+    ],
+    github: 'https://github.com/ayushdhiman7/orb-paper-bot',
+    live: 'https://orb7.duckdns.org/',
+    details: true,
+    projectDetailsPageSlug: '/projects/orb-paper-bot',
+    isWorking: true,
+    detailContent: {
+      overview:
+        'ORB Paper Bot is a paper-only trading system I built to test an Opening Range Breakout strategy on five NSE stocks honestly, not to claim an edge. A Python bot runs every weekday on AWS EC2 under systemd, reads live prices from Angel One with a Yahoo Finance fallback, logs every trade to Supabase, and never places a real order. A React + TypeScript dashboard, installable as a mobile app, shows performance, open positions, backtests and an AI-versus-no-AI comparison.',
+      highlightsLabel: 'ORB Paper Bot includes:',
+      highlights: [
+        'Fail-closed risk controls: a daily loss cap that counts open losses, halts when a price or a database write is missing, and a 15:15 square-off with retries',
+        'Restart recovery that rebuilds today’s open positions from Supabase, so a crash never forgets a trade',
+        'Percentage-based cost and slippage model shared by the live paper engine, the backtest and the dashboard, with fees counted exactly once',
+        'Live-quote feed with stale and invalid price rejection, logged feed switches and a Yahoo Finance fallback',
+        'Gemini AI second opinion on entries and exits, kept in shadow mode and measured against an independent no-AI control ledger',
+        'Shadow ledger that replays alternative exits (break-even, give-back, trailing) on the same trades, with nothing enabled before months of evidence',
+        'Telegram alerts for entries, exits and halts, plus a separate watchdog timer that flags a stopped bot or a stale price',
+        'Installable PWA dashboard with mobile trade cards, deployed to EC2 behind Nginx and HTTPS, with GitHub Actions CI and pull-based auto-deploy with rollback',
+      ],
+      outcome:
+        'A small, evidence-first trading research platform. The backtests so far show no proven edge, so the system is built to find that out cheaply: nothing changes the strategy until paper-trading evidence supports it.',
+    },
+  },
   {
     title: 'Flow',
     description:
@@ -64,38 +111,41 @@ export const projects: Project[] = [
     },
   },
   {
-  title: "Wave AI",
-  description: "Ask questions, chat with AI, and explore the possibilities of AI-powered conversation using Hugging Face inference with Qwen/Qwen3-4B-Thinking-2507:nscale model. A modern web application built with React, Vite, and Tailwind CSS.",
-  image: "/project/wave.png",
-  link: "https://github.com/ayushdhiman7/wave-ai",
-  technologies: [
-    { name: "React", icon: <ReactIcon key="react" /> },
-  { name: "Hugging Face", icon: <HuggingFace key="huggingface" /> },
-    { name: "Vite", icon: <Vite key="vite" /> },
-    { name: "Tailwind CSS", icon: <TailwindCss key="tailwindcss" /> },
-    { name: "Node.js", icon: <NodeJs key="nodejs" /> },
-    { name: "Express", icon: <ExpressJs key="express" /> },
-    { name: "JavaScript", icon: <Js key="js" /> },
-    { name: "HTML5", icon: <Html  /> },
-    { name: "CSS3", icon: <Css key="css" /> },
-  ],
-  github: "https://github.com/ayushdhiman7/wave-ai",
-  live: "https://wave-ai-two.vercel.app",
-  details: true,
-  projectDetailsPageSlug: "/projects/wave-ai",
-  isWorking: true,
-  detailContent: {
-    overview: "Wave AI is a modern AI-powered chat application built with a sandbox architecture featuring a React frontend, Vite build tool, and Tailwind CSS styling. It provides a seamless conversational AI experience with context-aware responses and a clean, intuitive interface, using Hugging Face inference with the Qwen/Qwen3-4B-Thinking-2507:nscale model.",
-    highlightsLabel: "Wave AI features:",
-    highlights: [
-      "AI Chat: Powerful AI conversations with context awareness",
-      "Responsive Design: Works beautifully on mobile and desktop",
-      "Modern UI: Clean, intuitive interface built with Tailwind CSS",
-      "Route-based Navigation: Home, Pricing, Roadmap, and Chat pages",
-      "AI-powered Features: Smart chatbot with personalized recommendations",
+    title: 'Wave AI',
+    description:
+      'Ask questions, chat with AI, and explore the possibilities of AI-powered conversation using Hugging Face inference with Qwen/Qwen3-4B-Thinking-2507:nscale model. A modern web application built with React, Vite, and Tailwind CSS.',
+    image: '/project/wave.png',
+    link: 'https://github.com/ayushdhiman7/wave-ai',
+    technologies: [
+      { name: 'React', icon: <ReactIcon key="react" /> },
+      { name: 'Hugging Face', icon: <HuggingFace key="huggingface" /> },
+      { name: 'Vite', icon: <Vite key="vite" /> },
+      { name: 'Tailwind CSS', icon: <TailwindCss key="tailwindcss" /> },
+      { name: 'Node.js', icon: <NodeJs key="nodejs" /> },
+      { name: 'Express', icon: <ExpressJs key="express" /> },
+      { name: 'JavaScript', icon: <Js key="js" /> },
+      { name: 'HTML5', icon: <Html /> },
+      { name: 'CSS3', icon: <Css key="css" /> },
     ],
-    outcome: "A production-style AI chat application offering real-time conversational AI with low-latency streaming and a clean, intuitive interface.",
-    }
+    github: 'https://github.com/ayushdhiman7/wave-ai',
+    live: 'https://wave-ai-two.vercel.app',
+    details: true,
+    projectDetailsPageSlug: '/projects/wave-ai',
+    isWorking: true,
+    detailContent: {
+      overview:
+        'Wave AI is a modern AI-powered chat application built with a sandbox architecture featuring a React frontend, Vite build tool, and Tailwind CSS styling. It provides a seamless conversational AI experience with context-aware responses and a clean, intuitive interface, using Hugging Face inference with the Qwen/Qwen3-4B-Thinking-2507:nscale model.',
+      highlightsLabel: 'Wave AI features:',
+      highlights: [
+        'AI Chat: Powerful AI conversations with context awareness',
+        'Responsive Design: Works beautifully on mobile and desktop',
+        'Modern UI: Clean, intuitive interface built with Tailwind CSS',
+        'Route-based Navigation: Home, Pricing, Roadmap, and Chat pages',
+        'AI-powered Features: Smart chatbot with personalized recommendations',
+      ],
+      outcome:
+        'A production-style AI chat application offering real-time conversational AI with low-latency streaming and a clean, intuitive interface.',
+    },
   },
   {
     title: 'Crime Alert',
